@@ -40,13 +40,13 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">ConfigurableStringMetric</span><span class="tparams">[<span name="R">R</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.R">R</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.O">O</span>] with <a href="StringFilterable.html" class="extype" name="com.rockymadden.stringmetric.StringFilterable">StringFilterable</a></span>
+        <span class="name">ConfigurableStringMetric</span><span class="tparams">[<span name="R">R</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.R">R</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.O">O</span>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="StringFilterable.html" class="extype" name="com.rockymadden.stringmetric.StringFilterable">StringFilterable</a>, <a href="Filterable.html" class="extype" name="com.rockymadden.stringmetric.Filterable">Filterable</a>[<span class="extype" name="scala.Predef.String">String</span>], <a href="ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.R">R</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.O">O</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.R">R</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.O">O</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a href="similarity/DiceSorensenMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric">DiceSorensenMetric</a>, <a href="similarity/NGramMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.NGramMetric">NGramMetric</a>, <a href="similarity/WeightedLevenshteinMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetric">WeightedLevenshteinMetric</a></div>
@@ -67,7 +67,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.rockymadden.stringmetric.ConfigurableStringMetric"><span>ConfigurableStringMetric</span></li><li class="in" name="com.rockymadden.stringmetric.StringFilterable"><span>StringFilterable</span></li><li class="in" name="com.rockymadden.stringmetric.Filterable"><span>Filterable</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableMetric"><span>ConfigurableMetric</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.rockymadden.stringmetric.ConfigurableStringMetric"><span>ConfigurableStringMetric</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableMetric"><span>ConfigurableMetric</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -242,32 +242,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="filter(string:String):String"></a>
-      <a id="filter(String):String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="string">string: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a> → <a href="Filterable.html" class="extype" name="com.rockymadden.stringmetric.Filterable">Filterable</a></dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="filter(charArray:Array[Char]):Array[Char]"></a>
-      <a id="filter(Array[Char]):Array[Char]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="charArray">charArray: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a> → <a href="StringFilterable.html" class="extype" name="com.rockymadden.stringmetric.StringFilterable">StringFilterable</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -445,11 +419,7 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="com.rockymadden.stringmetric.StringFilterable">
-              <h3>Inherited from <a href="StringFilterable.html" class="extype" name="com.rockymadden.stringmetric.StringFilterable">StringFilterable</a></h3>
-            </div><div class="parent" name="com.rockymadden.stringmetric.Filterable">
-              <h3>Inherited from <a href="Filterable.html" class="extype" name="com.rockymadden.stringmetric.Filterable">Filterable</a>[<span class="extype" name="scala.Predef.String">String</span>]</h3>
-            </div><div class="parent" name="com.rockymadden.stringmetric.ConfigurableMetric">
+        <div class="parent" name="com.rockymadden.stringmetric.ConfigurableMetric">
               <h3>Inherited from <a href="ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.R">R</span>, <span class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric.O">O</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>

@@ -46,9 +46,9 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An implementation of the Dice/Sorensen metric. This implementation differs in that n-gram size is required.
 Traditionally, the algorithm uses bigrams.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric">DiceSorensenMetric</a> with <a href="../StringFilter.html" class="extype" name="com.rockymadden.stringmetric.StringFilter">StringFilter</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>], <a href="../StringFilterable.html" class="extype" name="com.rockymadden.stringmetric.StringFilterable">StringFilterable</a>, <a href="../Filterable.html" class="extype" name="com.rockymadden.stringmetric.Filterable">Filterable</a>[<span class="extype" name="scala.Predef.String">String</span>], <a href="../ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>], <a href="../ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -66,7 +66,7 @@ Traditionally, the algorithm uses bigrams.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric"><span>DiceSorensenMetric</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableStringMetric"><span>ConfigurableStringMetric</span></li><li class="in" name="com.rockymadden.stringmetric.StringFilterable"><span>StringFilterable</span></li><li class="in" name="com.rockymadden.stringmetric.Filterable"><span>Filterable</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableMetric"><span>ConfigurableMetric</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric"><span>DiceSorensenMetric</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableStringMetric"><span>ConfigurableStringMetric</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableMetric"><span>ConfigurableMetric</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -254,32 +254,6 @@ Traditionally, the algorithm uses bigrams.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="filter(string:String):String"></a>
-      <a id="filter(String):String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="string">string: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a> → <a href="../Filterable.html" class="extype" name="com.rockymadden.stringmetric.Filterable">Filterable</a></dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="filter(charArray:Array[Char]):Array[Char]"></a>
-      <a id="filter(Array[Char]):Array[Char]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="charArray">charArray: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a> → <a href="../StringFilterable.html" class="extype" name="com.rockymadden.stringmetric.StringFilterable">StringFilterable</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -459,10 +433,6 @@ Traditionally, the algorithm uses bigrams.
         <div id="inheritedMembers">
         <div class="parent" name="com.rockymadden.stringmetric.ConfigurableStringMetric">
               <h3>Inherited from <a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</h3>
-            </div><div class="parent" name="com.rockymadden.stringmetric.StringFilterable">
-              <h3>Inherited from <a href="../StringFilterable.html" class="extype" name="com.rockymadden.stringmetric.StringFilterable">StringFilterable</a></h3>
-            </div><div class="parent" name="com.rockymadden.stringmetric.Filterable">
-              <h3>Inherited from <a href="../Filterable.html" class="extype" name="com.rockymadden.stringmetric.Filterable">Filterable</a>[<span class="extype" name="scala.Predef.String">String</span>]</h3>
             </div><div class="parent" name="com.rockymadden.stringmetric.ConfigurableMetric">
               <h3>Inherited from <a href="../ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
