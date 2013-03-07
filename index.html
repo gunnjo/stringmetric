@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -22,16 +22,14 @@
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/rockymadden/stringmetric/zipball/master">Download ZIP</a></li>
           <li class="download"><a class="buttons" href="https://github.com/rockymadden/stringmetric/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="http://rockymadden.com/stringmetric/scaladoc/">Scaladoc</a></li>
           <li><a class="buttons github" href="https://github.com/rockymadden/stringmetric">View On GitHub</a></li>
         </ul>
 
-        <p class="header">This project is maintained by <a class="header name" href="http://rockymadden.com/">rockymadden</a></p>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/rockymadden">rockymadden</a></p>
 
 
       </header>
       <section>
-      <h2>Overview</h2>
         <p>The stringmetric project provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface. Heavy emphasis is placed on unit testing and performance (verified via microbenchmark suites).</p>
 
 <h2>Metrics and Algorithms</h2>
@@ -65,16 +63,30 @@
 <strong>Weighted Levenshtein</strong> (Similarity metric)</li>
 </ul><h2>Installation</h2>
 
-<p>Available on the <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.rockymadden.stringmetric%22">Maven Central Repository</a>:</p>
+<p>Available on the <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.rockymadden.stringmetric%22">Maven Central Repository</a>. Depending on the core sub-project shown below (add others, like the CLI, as needed):</p>
 
-<ul>
-<li>
-<strong>groupId</strong>: com.rockymadden.stringmetric</li>
-<li>
-<strong>artifactId</strong>: stringmetric-core</li>
-<li>
-<strong>artifactId</strong>: stringmetric-cli</li>
-</ul>
+<h3>SBT</h3>
+
+<div class="highlight"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.22.3"</span>
+</pre></div>
+
+<h3>Gradle</h3>
+
+<div class="highlight"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.22.3'</span>
+</pre></div>
+
+<h3>Maven</h3>
+
+<div class="highlight"><pre><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>com.rockymadden.stringmetric<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>stringmetric-core<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.22.3<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+
+<h2>Scaladocs</h2>
+
+<p><a href="http://rockymadden.com/stringmetric/scaladoc/">Scaladocs</a> are available on the project website.</p>
 
 <h2>Similarity package</h2>
 
@@ -355,43 +367,43 @@ l222
 
 <p>The help option prints command syntax and usage:</p>
 
-<div class="highlight"><pre><span class="nv">$ </span>metaphoneMetric --help
-Compares two strings to determine <span class="k">if </span>they are phonetically similarly, per the Metaphone algorithm.
+<pre lang="shell"><code>$ metaphoneMetric --help
+Compares two strings to determine if they are phonetically similarly, per the Metaphone algorithm.
 
 Syntax:
-  metaphoneMetric <span class="o">[</span>Options<span class="o">]</span> string1 string2...
+  metaphoneMetric [Options] string1 string2...
 
 Options:
   -h, --help
     Outputs description, syntax, and options.
-</pre></div>
+</code></pre>
 
-<div class="highlight"><pre><span class="nv">$ </span>jaroWinklerMetric --help
+<pre lang="shell"><code>$ jaroWinklerMetric --help
 Compares two strings to calculate the Jaro-Winkler distance.
 
 Syntax:
-  jaroWinklerMetric <span class="o">[</span>Options<span class="o">]</span> string1 string2...
+  jaroWinklerMetric [Options] string1 string2...
 
 Options:
   -h, --help
     Outputs description, syntax, and options.
-</pre></div>
+</code></pre>
 
 <p>Compare "dog" to "dawg":</p>
 
-<div class="highlight"><pre><span class="nv">$ </span>metaphoneMetric dog dawg
-<span class="nb">true</span>
-</pre></div>
+<pre lang="shell"><code>$ metaphoneMetric dog dawg
+true
+</code></pre>
 
-<div class="highlight"><pre><span class="nv">$ </span>jaroWinklerMetric dog dawg
+<pre lang="shell"><code>$ jaroWinklerMetric dog dawg
 0.75
-</pre></div>
+</code></pre>
 
 <p>Get the phonetic representation of "dog" using the Metaphone phonetic algorithm:</p>
 
-<div class="highlight"><pre><span class="nv">$ </span>metaphoneAlgorithm dog
+<pre lang="shell"><code>$ metaphoneAlgorithm dog
 tk
-</pre></div>
+</code></pre>
 
 <h2>Todo</h2>
 
@@ -423,6 +435,9 @@ tk
 
 <p>Please contact me directly. Find all my contact information on my <a href="http://rockymadden.com/">personal website</a>.</p>
       </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 		          <script type="text/javascript">
