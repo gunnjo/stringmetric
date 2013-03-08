@@ -76,7 +76,7 @@
 
 <p>Available on the <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.rockymadden.stringmetric%22">Maven Central Repository</a>. Depending on the core sub-project shown below (add others, like the CLI, as needed):</p>
 
-<hr><p><strong>SBT:</strong></p>
+<p><strong>SBT:</strong></p>
 
 <div class="highlight"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.22.4"</span>
 </pre></div>
@@ -99,7 +99,7 @@
 
 <p>Useful for approximate string matching and measurement of string distance. Most metrics calculate the similarity of two strings as a double with a value between 0 and 1. A value of 0 being completely different and a value of 1 being completely similar.</p>
 
-<hr><p><strong>Dice / Sorensen Metric:</strong></p>
+<p><strong>Dice / Sorensen Metric:</strong></p>
 
 <div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">DiceSorensenMetric</span><span class="o">().</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">DiceSorensenMetric</span><span class="o">().</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">))</span>
@@ -234,7 +234,7 @@ Array("abc", "bcd", "cde", "def", "efg", "fgh", "ghi", "hij", "ijk", "jkl", "klm
 
 <p>Useful for indexing by word pronunciation and performing sounds-like comparisons. All metrics return a boolean value indicating if the two strings sound the same, per the algorithm used. All metrics have an algorithm counterpart which provide the means to perform indexing by word pronunciation.</p>
 
-<hr><p><strong>Metaphone Metric:</strong></p>
+<p><strong>Metaphone Metric:</strong></p>
 
 <div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneMetric</span><span class="o">().</span><span class="n">compare</span><span class="o">(</span><span class="s">"merci"</span><span class="o">,</span> <span class="s">"mercy"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneMetric</span><span class="o">().</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">))</span>
@@ -371,7 +371,7 @@ l222
 
 <p>It is possible to decorate algorithms and metrics with additional functionality. The most common decorations are filters, which are useful for filtering strings prior to evaluation (e.g. ignore case, ignore non-alpha, ignore spaces). <strong>NOTE:</strong> Memoization decorator on roadmap.</p>
 
-<hr><p>Basic example with no filtering:</p>
+<p>Basic example with no filtering:</p>
 
 <div class="highlight"><pre><span class="nc">JaroWinklerMetric</span><span class="o">().</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
 </pre></div>
@@ -390,7 +390,7 @@ l222
 
 <p>Convenience objects are available to make interactions with the library easier.</p>
 
-<hr><p><strong>StringAlgorithm:</strong></p>
+<p><strong>StringAlgorithm:</strong></p>
 
 <div class="highlight"><pre><span class="c1">// Invoke compute methods. Each algorithm backed by an undecorated lazy val.</span>
 <span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithMetaphone</span><span class="o">(</span><span class="s">"string"</span><span class="o">)</span>
@@ -437,7 +437,7 @@ l222
 
 <p>Every metric and algorithm has a command line interface. Said code is housed in a separate sub-project from the core library called "stringmetric-cli".</p>
 
-<hr><p>The help option prints command syntax and usage:</p>
+<p>The help option prints command syntax and usage:</p>
 
 <pre lang="shell"><code>$ metaphoneMetric --help
 Compares two strings to determine if they are phonetically similarly, per the Metaphone algorithm.
