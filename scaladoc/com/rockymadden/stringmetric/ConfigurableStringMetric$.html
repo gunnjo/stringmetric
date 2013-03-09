@@ -99,6 +99,19 @@
       </span>
       </h4>
       
+    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric.JaccardMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JaccardMetric=com.rockymadden.stringmetric.similarity.JaccardMetric"></a>
+      <a id="JaccardMetric:JaccardMetric"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JaccardMetric</span><span class="result"> = <a href="similarity/JaccardMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.JaccardMetric">similarity.JaccardMetric</a></span>
+      </span>
+      </h4>
+      
     </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric.NGramMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NGramMetric=com.rockymadden.stringmetric.similarity.NGramMetric"></a>
       <a id="NGramMetric:NGramMetric"></a>
@@ -210,6 +223,19 @@
       </span>
       </h4>
       
+    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#JaccardMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JaccardMetric:com.rockymadden.stringmetric.similarity.JaccardMetric.type"></a>
+      <a id="JaccardMetric:similarity.JaccardMetric.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JaccardMetric</span><span class="result">: <a href="similarity/JaccardMetric$.html" class="extype" name="com.rockymadden.stringmetric.similarity.JaccardMetric">similarity.JaccardMetric</a>.type</span>
+      </span>
+      </h4>
+      
     </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#NGramMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NGramMetric:com.rockymadden.stringmetric.similarity.NGramMetric.type"></a>
       <a id="NGramMetric:similarity.NGramMetric.type"></a>
@@ -291,6 +317,32 @@
       </span>
       </h4>
       
+    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#compareWithJaccard" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="compareWithJaccard(string1:String,string2:String)(n:Int):Option[Double]"></a>
+      <a id="compareWithJaccard(String,String)(Int):Option[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compareWithJaccard</span><span class="params">(<span name="string1">string1: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="string2">string2: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#compareWithJaccard" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="compareWithJaccard(charArray1:Array[Char],charArray2:Array[Char])(n:Int):Option[Double]"></a>
+      <a id="compareWithJaccard(Array[Char],Array[Char])(Int):Option[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compareWithJaccard</span><span class="params">(<span name="charArray1">charArray1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>, <span name="charArray2">charArray2: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#compareWithNGram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="compareWithNGram(string1:String,string2:String)(n:Int):Option[Double]"></a>
       <a id="compareWithNGram(String,String)(Int):Option[Double]"></a>
@@ -340,19 +392,6 @@
       </span>
       <span class="symbol">
         <span class="name">compareWithWeightedLevenshtein</span><span class="params">(<span name="charArray1">charArray1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>, <span name="charArray2">charArray2: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="params">(<span name="options">options: (<span class="extype" name="scala.BigDecimal">BigDecimal</span>, <span class="extype" name="scala.BigDecimal">BigDecimal</span>, <span class="extype" name="scala.BigDecimal">BigDecimal</span>)</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#diceSorensen" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="diceSorensen:com.rockymadden.stringmetric.similarity.DiceSorensenMetric"></a>
-      <a id="diceSorensen:similarity.DiceSorensenMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">diceSorensen</span><span class="result">: <a href="similarity/DiceSorensenMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric">similarity.DiceSorensenMetric</a></span>
       </span>
       </h4>
       
@@ -437,19 +476,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#nGram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="nGram:com.rockymadden.stringmetric.similarity.NGramMetric"></a>
-      <a id="nGram:similarity.NGramMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">nGram</span><span class="result">: <a href="similarity/NGramMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.NGramMetric">similarity.NGramMetric</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -563,19 +589,6 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.ConfigurableStringMetric#weightedLevenshtein" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="weightedLevenshtein:com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetric"></a>
-      <a id="weightedLevenshtein:similarity.WeightedLevenshteinMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">weightedLevenshtein</span><span class="result">: <a href="similarity/WeightedLevenshteinMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetric">similarity.WeightedLevenshteinMetric</a></span>
-      </span>
-      </h4>
-      
     </li></ol>
             </div>
 

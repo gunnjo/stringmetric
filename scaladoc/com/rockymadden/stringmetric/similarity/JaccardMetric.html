@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>NGramMetric - stringmetric scaladoc - com.rockymadden.stringmetric.similarity.NGramMetric</title>
-          <meta name="description" content="NGramMetric - stringmetric scaladoc - com.rockymadden.stringmetric.similarity.NGramMetric" />
-          <meta name="keywords" content="NGramMetric stringmetric scaladoc com.rockymadden.stringmetric.similarity.NGramMetric" />
+          <title>JaccardMetric - stringmetric scaladoc - com.rockymadden.stringmetric.similarity.JaccardMetric</title>
+          <meta name="description" content="JaccardMetric - stringmetric scaladoc - com.rockymadden.stringmetric.similarity.JaccardMetric" />
+          <meta name="keywords" content="JaccardMetric stringmetric scaladoc com.rockymadden.stringmetric.similarity.JaccardMetric" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -17,7 +17,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'com.rockymadden.stringmetric.similarity.NGramMetric$';
+            var hash = 'com.rockymadden.stringmetric.similarity.JaccardMetric';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -27,26 +27,26 @@
    	  </script>
     
         </head>
-        <body class="value">
+        <body class="type">
       <div id="definition">
-        <a href="NGramMetric.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
+        <a href="JaccardMetric$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.rockymadden">rockymadden</a>.<a href="../package.html" class="extype" name="com.rockymadden.stringmetric">stringmetric</a>.<a href="package.html" class="extype" name="com.rockymadden.stringmetric.similarity">similarity</a></p>
-        <h1><a href="NGramMetric.html" title="Go to companion">NGramMetric</a></h1>
+        <h1><a href="JaccardMetric$.html" title="Go to companion">JaccardMetric</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">NGramMetric</span>
+        <span class="name">JaccardMetric</span><span class="result"> extends <a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.similarity.JaccardMetric">JaccardMetric</a> with <a href="../StringFilter.html" class="extype" name="com.rockymadden.stringmetric.StringFilter">StringFilter</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>], <a href="../ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -64,7 +64,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.rockymadden.stringmetric.similarity.NGramMetric"><span>NGramMetric</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.rockymadden.stringmetric.similarity.JaccardMetric"><span>JaccardMetric</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableStringMetric"><span>ConfigurableStringMetric</span></li><li class="in" name="com.rockymadden.stringmetric.ConfigurableMetric"><span>ConfigurableMetric</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -82,7 +82,23 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="com.rockymadden.stringmetric.similarity.JaccardMetric#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():com.rockymadden.stringmetric.similarity.JaccardMetric"></a>
+      <a id="&lt;init&gt;:JaccardMetric"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JaccardMetric</span><span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -155,19 +171,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetric#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply():com.rockymadden.stringmetric.similarity.NGramMetric"></a>
-      <a id="apply():NGramMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="NGramMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.NGramMetric">NGramMetric</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -197,32 +200,32 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetric#compare" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="compare(string1:String,string2:String)(n:Int):Option[Double]"></a>
+    </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetric#compare" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compare(string1:String,string2:String)(implicitn:Int):Option[Double]"></a>
       <a id="compare(String,String)(Int):Option[Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compare</span><span class="params">(<span name="string1">string1: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="string2">string2: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">compare</span><span class="params">(<span name="string1">string1: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="string2">string2: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetric#compare" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="compare(charArray1:Array[Char],charArray2:Array[Char])(n:Int):Option[Double]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.similarity.JaccardMetric">JaccardMetric</a> → <a href="../ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a></dd></dl></div>
+    </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetric#compare" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compare(charArray1:Array[Char],charArray2:Array[Char])(implicitn:Int):Option[Double]"></a>
       <a id="compare(Array[Char],Array[Char])(Int):Option[Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compare</span><span class="params">(<span name="charArray1">charArray1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>, <span name="charArray2">charArray2: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">compare</span><span class="params">(<span name="charArray1">charArray1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>, <span name="charArray2">charArray2: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.similarity.JaccardMetric">JaccardMetric</a> → <a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -426,7 +429,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="com.rockymadden.stringmetric.ConfigurableStringMetric">
+              <h3>Inherited from <a href="../ConfigurableStringMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableStringMetric">ConfigurableStringMetric</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</h3>
+            </div><div class="parent" name="com.rockymadden.stringmetric.ConfigurableMetric">
+              <h3>Inherited from <a href="../ConfigurableMetric.html" class="extype" name="com.rockymadden.stringmetric.ConfigurableMetric">ConfigurableMetric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
