@@ -102,7 +102,7 @@ repetitive imports, etc), but are required because of the way scalascript is ult
       </h4>
       <p class="comment cmt">Defines the traits and provides basic implementations of a command.</p>
     </li><li name="com.rockymadden.stringmetric.cli.OptionMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMap=Map[Symbol,String]"></a>
+      <a id="OptionMap=Map[Symbol,com.rockymadden.stringmetric.cli.OptionString]"></a>
       <a id="OptionMap:OptionMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -110,124 +110,7 @@ repetitive imports, etc), but are required because of the way scalascript is ult
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">OptionMap</span><span class="result"> = <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Symbol">Symbol</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapArrayextendsOptionMapType[Array[String]]withProductwithSerializable"></a>
-      <a id="OptionMapArray:OptionMapArray"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapArray.html"><span class="name">OptionMapArray</span></a><span class="params">(<span name="arrayString">arrayString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapBigDecimal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapBigDecimalextendsOptionMapType[BigDecimal]withProductwithSerializable"></a>
-      <a id="OptionMapBigDecimal:OptionMapBigDecimal"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapBigDecimal.html"><span class="name">OptionMapBigDecimal</span></a><span class="params">(<span name="bigDecimalString">bigDecimalString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.BigDecimal">BigDecimal</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapBigInt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapBigIntextendsOptionMapType[BigInt]withProductwithSerializable"></a>
-      <a id="OptionMapBigInt:OptionMapBigInt"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapBigInt.html"><span class="name">OptionMapBigInt</span></a><span class="params">(<span name="bigIntString">bigIntString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.BigInt">BigInt</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapDoubleextendsOptionMapType[Double]withProductwithSerializable"></a>
-      <a id="OptionMapDouble:OptionMapDouble"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapDouble.html"><span class="name">OptionMapDouble</span></a><span class="params">(<span name="doubleString">doubleString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapFloat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapFloatextendsOptionMapType[Float]withProductwithSerializable"></a>
-      <a id="OptionMapFloat:OptionMapFloat"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapFloat.html"><span class="name">OptionMapFloat</span></a><span class="params">(<span name="floatString">floatString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.Float">Float</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapInt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapIntextendsOptionMapType[Int]withProductwithSerializable"></a>
-      <a id="OptionMapInt:OptionMapInt"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapInt.html"><span class="name">OptionMapInt</span></a><span class="params">(<span name="intString">intString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapListextendsOptionMapType[List[String]]withProductwithSerializable"></a>
-      <a id="OptionMapList:OptionMapList"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapList.html"><span class="name">OptionMapList</span></a><span class="params">(<span name="listString">listString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapLong" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapLongextendsOptionMapType[Long]withProductwithSerializable"></a>
-      <a id="OptionMapLong:OptionMapLong"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapLong.html"><span class="name">OptionMapLong</span></a><span class="params">(<span name="longString">longString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.Long">Long</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapShort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapShortextendsOptionMapType[Short]withProductwithSerializable"></a>
-      <a id="OptionMapShort:OptionMapShort"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapShort.html"><span class="name">OptionMapShort</span></a><span class="params">(<span name="shortString">shortString: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="OptionMapType.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionMapType">OptionMapType</a>[<span class="extype" name="scala.Short">Short</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">OptionMap</span><span class="result"> = <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Symbol">Symbol</span>, <a href="OptionString.html" class="extype" name="com.rockymadden.stringmetric.cli.OptionString">OptionString</a>]</span>
       </span>
       </h4>
       
@@ -247,35 +130,19 @@ repetitive imports, etc), but are required because of the way scalascript is ult
                 <span class="name">@RunWith</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="OptionMapType[T]extendsObject"></a>
-      <a id="OptionMapType[T]:OptionMapType[T]"></a>
+    </li><li name="com.rockymadden.stringmetric.cli.OptionString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OptionStringextendsObject"></a>
+      <a id="OptionString:OptionString"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">sealed abstract </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="OptionMapType.html"><span class="name">OptionMapType</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="OptionString.html"><span class="name">OptionString</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapTypeSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="OptionMapTypeSpecextendsScalaTest"></a>
-      <a id="OptionMapTypeSpec:OptionMapTypeSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="OptionMapTypeSpec.html"><span class="name">OptionMapTypeSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li></ol>
             </div>
 
@@ -296,16 +163,29 @@ repetitive imports, etc), but are required because of the way scalascript is ult
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.cli.OptionMapType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OptionMapType"></a>
-      <a id="OptionMapType:OptionMapType"></a>
+    </li><li name="com.rockymadden.stringmetric.cli.OptionString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OptionString"></a>
+      <a id="OptionString:OptionString"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="OptionMapType$.html"><span class="name">OptionMapType</span></a>
+        <a href="OptionString$.html"><span class="name">OptionString</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.cli.package#StringArrayToOptionMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringArrayToOptionMap(stringArray:Array[String]):com.rockymadden.stringmetric.cli.package.OptionMap"></a>
+      <a id="StringArrayToOptionMap(Array[String]):OptionMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">StringArrayToOptionMap</span><span class="params">(<span name="stringArray">stringArray: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="#OptionMap=Map[Symbol,com.rockymadden.stringmetric.cli.OptionString]" class="extmbr" name="com.rockymadden.stringmetric.cli.OptionMap">OptionMap</a></span>
       </span>
       </h4>
       
@@ -335,6 +215,19 @@ repetitive imports, etc), but are required because of the way scalascript is ult
       </span>
       </h4>
       <p class="comment cmt">Provides core similarity CLI functionality.</p>
+    </li><li name="com.rockymadden.stringmetric.cli.tokenization" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tokenization"></a>
+      <a id="tokenization:tokenization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="tokenization/package.html"><span class="name">tokenization</span></a>
+      </span>
+      </h4>
+      
     </li></ol>
             </div>
 

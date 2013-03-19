@@ -40,13 +40,13 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">StringAlgorithm</span><span class="tparams">[<span name="R">R</span>]</span><span class="result"> extends <a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>]</span>
+        <span class="name">StringAlgorithm</span><span class="tparams">[<span name="O">O</span>, <span name="R">R</span>]</span><span class="result"> extends <a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.O">O</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.O">O</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a href="phonetic/MetaphoneAlgorithm.html" class="extype" name="com.rockymadden.stringmetric.phonetic.MetaphoneAlgorithm">MetaphoneAlgorithm</a>, <a href="phonetic/NysiisAlgorithm.html" class="extype" name="com.rockymadden.stringmetric.phonetic.NysiisAlgorithm">NysiisAlgorithm</a>, <a href="phonetic/RefinedNysiisAlgorithm.html" class="extype" name="com.rockymadden.stringmetric.phonetic.RefinedNysiisAlgorithm">RefinedNysiisAlgorithm</a>, <a href="phonetic/RefinedSoundexAlgorithm.html" class="extype" name="com.rockymadden.stringmetric.phonetic.RefinedSoundexAlgorithm">RefinedSoundexAlgorithm</a>, <a href="phonetic/SoundexAlgorithm.html" class="extype" name="com.rockymadden.stringmetric.phonetic.SoundexAlgorithm">SoundexAlgorithm</a></div>
@@ -92,28 +92,28 @@
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="com.rockymadden.stringmetric.StringAlgorithm#compute" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="compute(charArray:Array[Char]):Option[Array[_]]"></a>
-      <a id="compute(Array[Char]):Option[Array[_]]"></a>
+      <a id="compute(charArray:Array[Char])(implicito:O):Option[Array[_]]"></a>
+      <a id="compute(Array[Char])(O):Option[Array[_]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compute</span><span class="params">(<span name="charArray">charArray: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[_]]</span>
+        <span class="name">compute</span><span class="params">(<span name="charArray">charArray: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="o">o: <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.O">O</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[_]]</span>
       </span>
       </h4>
       
     </li><li name="com.rockymadden.stringmetric.Algorithm#compute" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="compute(t:T):Option[R]"></a>
-      <a id="compute(String):Option[R]"></a>
+      <a id="compute(t:T)(implicito:O):Option[R]"></a>
+      <a id="compute(String)(O):Option[R]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compute</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>]</span>
+        <span class="name">compute</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="o">o: <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.O">O</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a></dd></dl></div>
@@ -420,7 +420,7 @@
 
         <div id="inheritedMembers">
         <div class="parent" name="com.rockymadden.stringmetric.Algorithm">
-              <h3>Inherited from <a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>]</h3>
+              <h3>Inherited from <a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.O">O</span>, <span class="extype" name="com.rockymadden.stringmetric.StringAlgorithm.R">R</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

@@ -40,7 +40,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">JaroMetric</span><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">JaroMetric</span><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       
@@ -48,7 +48,7 @@
 in string2, it cannot be matched upon again. This results in a more penalized distance in these scenarios.
 </p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.similarity.JaroMetric">JaroMetric</a> with <a href="../StringFilter.html" class="extype" name="com.rockymadden.stringmetric.StringFilter">StringFilter</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>], <a href="../Metric.html" class="extype" name="com.rockymadden.stringmetric.Metric">Metric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>], <a href="../Metric.html" class="extype" name="com.rockymadden.stringmetric.Metric">Metric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -203,28 +203,28 @@ in string2, it cannot be matched upon again. This results in a more penalized di
               
         </dd></dl></div>
     </li><li name="com.rockymadden.stringmetric.similarity.JaroMetric#compare" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compare(string1:String,string2:String):Option[Double]"></a>
-      <a id="compare(String,String):Option[Double]"></a>
+      <a id="compare(string1:String,string2:String)(implicitdi:DummyImplicit):Option[Double]"></a>
+      <a id="compare(String,String)(DummyImplicit):Option[Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compare</span><span class="params">(<span name="string1">string1: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="string2">string2: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">compare</span><span class="params">(<span name="string1">string1: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="string2">string2: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="di">di: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.similarity.JaroMetric">JaroMetric</a> → <a href="../Metric.html" class="extype" name="com.rockymadden.stringmetric.Metric">Metric</a></dd></dl></div>
     </li><li name="com.rockymadden.stringmetric.similarity.JaroMetric#compare" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compare(charArray1:Array[Char],charArray2:Array[Char]):Option[Double]"></a>
-      <a id="compare(Array[Char],Array[Char]):Option[Double]"></a>
+      <a id="compare(charArray1:Array[Char],charArray2:Array[Char])(implicitdi:DummyImplicit):Option[Double]"></a>
+      <a id="compare(Array[Char],Array[Char])(DummyImplicit):Option[Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compare</span><span class="params">(<span name="charArray1">charArray1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>, <span name="charArray2">charArray2: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">compare</span><span class="params">(<span name="charArray1">charArray1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>, <span name="charArray2">charArray2: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="di">di: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.rockymadden.stringmetric.similarity.JaroMetric">JaroMetric</a> → <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a></dd></dl></div>
@@ -432,9 +432,9 @@ in string2, it cannot be matched upon again. This results in a more penalized di
 
         <div id="inheritedMembers">
         <div class="parent" name="com.rockymadden.stringmetric.StringMetric">
-              <h3>Inherited from <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>]</h3>
+              <h3>Inherited from <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>]</h3>
             </div><div class="parent" name="com.rockymadden.stringmetric.Metric">
-              <h3>Inherited from <a href="../Metric.html" class="extype" name="com.rockymadden.stringmetric.Metric">Metric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</h3>
+              <h3>Inherited from <a href="../Metric.html" class="extype" name="com.rockymadden.stringmetric.Metric">Metric</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
