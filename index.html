@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - string metrics and phonetic algorithms for scala</title>
+    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -102,24 +102,6 @@
     <span class="nt">&lt;version&gt;</span>0.25.2<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
-
-<h2>Building the CLIs</h2>
-
-<p>When built, the CLI sub-project creates an individual shell command for each algorithm and metric. The sub-project is built via a Gradle task:</p>
-
-<pre lang="shell"><code>git clone https://github.com/rockymadden/stringmetric.git
-cd stringmetric
-gradle :stringmetric-cli:tar
-</code></pre>
-
-<p>Running the <code>tar</code> task will create a compressed archive <strong>and</strong> an unarchived copy of the built files. The files can be found under the <code>build</code> directory that Gradle creates. The archive is named <code>stringmetric-cli.tar.gz</code> and the unarchived files can be found in the directory named <code>stringmetric-cli</code>. </p>
-
-<p>To run a command from the current directory that you would be in from doing the above:</p>
-
-<pre lang="shell"><code>./cli/build/stringmetric-cli/jaroMetric abc xyz
-</code></pre>
-
-<p>Lastly, you may need to chmod the files because of the inability for Gradle to do so reliably.</p>
 
 <h2>Similarity package</h2>
 
@@ -426,6 +408,24 @@ l222
 <span class="k">val</span> <span class="n">metaphone</span><span class="k">:</span> <span class="kt">StringAlgorithm.Metaphone</span> <span class="o">=</span> <span class="nc">StringAlgorithm</span><span class="o">.</span><span class="nc">Metaphone</span><span class="o">()</span> <span class="k">with</span> <span class="nc">StringFilter</span><span class="o">.</span><span class="n">asciiSpace</span>
 <span class="k">val</span> <span class="n">asciiSpace</span><span class="k">:</span> <span class="kt">StringFilter.AsciiSpace</span> <span class="o">=</span> <span class="nc">StringFilter</span><span class="o">.</span><span class="n">asciiSpace</span>
 </pre></div>
+
+<h2>Building the CLIs</h2>
+
+<p>When built, the CLI sub-project creates an individual shell command for each algorithm and metric. The sub-project is built via a Gradle task:</p>
+
+<pre lang="shell"><code>git clone https://github.com/rockymadden/stringmetric.git
+cd stringmetric
+gradle :stringmetric-cli:tar
+</code></pre>
+
+<p>Running the <code>tar</code> task will create a compressed archive <strong>and</strong> an unarchived copy of the built files. The files can be found under the <code>build</code> directory that Gradle creates. The archive is named <code>stringmetric-cli.tar.gz</code> and the unarchived files can be found in the directory named <code>stringmetric-cli</code>. </p>
+
+<p>To run a command from the current directory that you would be in from doing the above:</p>
+
+<pre lang="shell"><code>./cli/build/stringmetric-cli/jaroMetric abc xyz
+</code></pre>
+
+<p>Lastly, you may need to chmod the files because of the inability for Gradle to do so reliably.</p>
 
 <h2>CLIs</h2>
 
