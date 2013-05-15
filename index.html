@@ -503,22 +503,28 @@ tk
 			})();
 
 			function trackRead() {
-				seconds += 15;
+				seconds += 10;
 				_gaq.push(["_trackEvent", "read", seconds.toString()]);
+				console.log("Read event: " + seconds);
 			}
 
-			document.getElementById("body").addEventListener("click", function(event) {
+			document.getElementById("body").onclick = function(event) {
 				var target = event.target || event.srcElement;
 
 				if (target && (target.nodeName == "A" || target.nodeName == "BUTTON")) {
-					_gaq.push(['_trackEvent', 'click', 'a', target.innerText.replace(/^\s+|\s+$/g, "")]);
+					var text = target.innerText.replace(/^\s+|\s+$/g, "");
+					var href = target.href || "null";
+
+					_gaq.push(["_trackEvent", "click", text + " (" + href + ")"]);
+					console.log("Click event: " + text + " (" + href + ")");
 				}
-			});
+			}
 
 			_gaq.push(["_setAccount","UA-20432336-1"]);
 			_gaq.push(["_trackPageview"]);
-			setInterval(trackRead, 15000);
+			setInterval(trackRead, 10000);
 		</script>
+
 
 
   </body>
