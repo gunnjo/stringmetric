@@ -434,22 +434,22 @@ gradle :stringmetric-cli:tar
 
 <p>The help option prints command syntax and usage:</p>
 
-<pre lang="shell"><code>$ metaphoneMetric --help
+<pre lang="shell"><code>$ metaphonemetric --help
 Compares two strings to determine if they are phonetically similarly, per the Metaphone algorithm.
 
 Syntax:
-  metaphoneMetric [Options] string1 string2...
+  metaphonemetric [Options] string1 string2...
 
 Options:
   -h, --help
     Outputs description, syntax, and options.
 </code></pre>
 
-<pre lang="shell"><code>$ jaroWinklerMetric --help
+<pre lang="shell"><code>$ jarowinklermetric --help
 Compares two strings to calculate the Jaro-Winkler distance.
 
 Syntax:
-  jaroWinklerMetric [Options] string1 string2...
+  jarowinklermetric [Options] string1 string2...
 
 Options:
   -h, --help
@@ -458,17 +458,17 @@ Options:
 
 <hr><p>Compare "dog" to "dawg":</p>
 
-<pre lang="shell"><code>$ metaphoneMetric dog dawg
+<pre lang="shell"><code>$ metaphonemetric dog dawg
 true
 </code></pre>
 
-<pre lang="shell"><code>$ jaroWinklerMetric dog dawg
+<pre lang="shell"><code>$ jarowinklermetric dog dawg
 0.75
 </code></pre>
 
 <hr><p>Get the phonetic representation of "dog" using the Metaphone phonetic algorithm:</p>
 
-<pre lang="shell"><code>$ metaphoneAlgorithm dog
+<pre lang="shell"><code>$ metaphonealgorithm dog
 tk
 </code></pre>
 
