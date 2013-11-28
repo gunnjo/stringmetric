@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -22,17 +22,31 @@
 
 
         <ul>
-          <li><a href="https://github.com/rockymadden/stringmetric/issues?labels=accepted%2Cenhancement&state=open">Queued <strong>Features</strong></a></li>
-          <li><a href="http://rockymadden.com/stringmetric/scaladoc/">View <strong>ScalaDoc</strong></a></li>
+          <li><a href="https://github.com/rockymadden/stringmetric/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rockymadden/stringmetric/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/rockymadden/stringmetric">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/r/rockymadden/stringmetric"><img src="https://coveralls.io/repos/rockymadden/stringmetric/badge.png" alt="Coverage Status"></a>
+        <h1>
+<a name="stringmetric--" class="anchor" href="#stringmetric--"><span class="octicon octicon-link"></span></a>stringmetric <a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/r/rockymadden/stringmetric"><img src="https://coveralls.io/repos/rockymadden/stringmetric/badge.png" alt="Coverage Status"></a>
+</h1>
 
-<p>String metrics and phonetic algorithms for Scala. The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
+<p>The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface. </p>
 
-<h2>
+<ul>
+<li>
+<strong>Requirements:</strong> Scala 2.10.x and, if building yourself, Gradle 1.6+</li>
+<li>
+<strong>Documentation:</strong> <a href="http://rockymadden.com/stringmetric/scaladoc/">ScalaDoc</a>
+</li>
+<li>
+<strong>Issues:</strong> <a href="https://github.com/rockymadden/stringmetric/issues?labels=accepted%2Cenhancement&amp;page=1&amp;state=open">Enhancements</a>, <a href="https://github.com/rockymadden/stringmetric/issues?labels=accepted%2Cquestion&amp;page=1&amp;state=open">Questions</a>, <a href="https://github.com/rockymadden/stringmetric/issues?labels=accepted%2Cbug&amp;page=1&amp;state=open">Bugs</a>
+</li>
+<li>
+<strong>Versioning:</strong> <a href="http://semver.org/">Semantic Versioning v2.0</a>
+</li>
+</ul><h2>
 <a name="metrics-and-algorithms" class="anchor" href="#metrics-and-algorithms"><span class="octicon octicon-link"></span></a>Metrics and algorithms</h2>
 
 <ul>
@@ -436,8 +450,6 @@ gradle :stringmetric-cli:tar
 <h2>
 <a name="using-the-clis" class="anchor" href="#using-the-clis"><span class="octicon octicon-link"></span></a>Using the CLIs</h2>
 
-<p>Every metric and algorithm has a command line interface. Said code is housed in a separate sub-project called <code>stringmetric-cli</code>.</p>
-
 <p>The help option prints command syntax and usage:</p>
 
 <pre lang="shell"><code>$ metaphonemetric --help
@@ -479,33 +491,34 @@ tk
 </code></pre>
 
 <h2>
-<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
-
-<p><a href="http://rockymadden.com/stringmetric/scaladoc/">Scaladoc</a> is available on the project website.</p>
-
-<h2>
-<a name="enhancements" class="anchor" href="#enhancements"><span class="octicon octicon-link"></span></a>Enhancements</h2>
-
-<p><a href="https://github.com/rockymadden/stringmetric/issues?labels=accepted%2Cenhancement&amp;page=1&amp;state=open">Issues labeled enhancement and accepted</a> indicate queued enhancements.</p>
-
-<h2>
-<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
-
-<ul>
-<li>Scala 2.10.x</li>
-<li>Gradle 1.x</li>
-</ul><h2>
-<a name="versioning" class="anchor" href="#versioning"><span class="octicon octicon-link"></span></a>Versioning</h2>
-
-<p><a href="http://semver.org/">Semantic Versioning v2.0</a></p>
-
-<h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a></p>
+<pre><code>The MIT License (MIT)
+
+Copyright (c) 2013 Rocky Madden (http://rockymadden.com/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SO
+</code></pre>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://rockymadden.com/">rockymadden</a></p>
+        <p>This project is maintained by <a href="https://github.com/rockymadden">rockymadden</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
