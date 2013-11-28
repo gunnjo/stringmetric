@@ -3,44 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body id="body">
+  <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">stringmetric</h1>
-        <p class="header">String metrics and phonetic algorithms for Scala.</p>
+        <h1>stringmetric</h1>
+        <p>String metrics and phonetic algorithms for Scala.</p>
+
+        <p class="view"><a href="https://github.com/rockymadden/stringmetric">View the Project on GitHub <small>rockymadden/stringmetric</small></a></p>
+
 
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/rockymadden/stringmetric/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/rockymadden/stringmetric/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="http://rockymadden.com/stringmetric/scaladoc/">API (Scaladoc)</a></li>
-          <li><a class="buttons github" href="https://github.com/rockymadden/stringmetric/issues?labels=accepted%2Cenhancement&page=1&state=open">Enhancements</a></li>
-          <li><a class="buttons github" href="https://github.com/rockymadden/stringmetric">View On GitHub</a></li
+          <li><a href="https://github.com/rockymadden/stringmetric/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rockymadden/stringmetric/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rockymadden/stringmetric">View On <strong>GitHub</strong></a></li>
         </ul>
-
-        <p class="header">This project is maintained by <a class="header name" href="http://rockymadden.com/">Rocky Madden</a></p>
-
-
       </header>
-      <section><h2>Overview <img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status" style="max-width:100%;"><img src="https://coveralls.io/repos/rockymadden/stringmetric/badge.png" alt="Coverage Status" style="max-width:100%;"></h2>
-        <p>The stringmetric library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface. Heavy emphasis is placed on unit testing and performance (verified via microbenchmark suites).</p>
+      <section>
+        <h1>
+<a name="stringmetric--" class="anchor" href="#stringmetric--"><span class="octicon octicon-link"></span></a>stringmetric <a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/r/rockymadden/stringmetric"><img src="https://coveralls.io/repos/rockymadden/stringmetric/badge.png" alt="Coverage Status"></a>
+</h1>
 
-<h2>Metrics and algorithms</h2>
+<p>String metrics and phonetic algorithms for Scala. The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
+
+<h2>
+<a name="metrics-and-algorithms" class="anchor" href="#metrics-and-algorithms"><span class="octicon octicon-link"></span></a>Metrics and algorithms</h2>
 
 <ul>
 <li>
 <strong><a href="http://en.wikipedia.org/wiki/Dice%27s_coefficient">Dice / Sorensen</a></strong> (Similarity metric)</li>
 <li>
-<strong><a href="http://en.wikipedia.org/wiki/Metaphone">Double Metaphone</a></strong> (Queued phonetic metric and algorithm)</li>
+<strong><a href="http://en.wikipedia.org/wiki/Metaphone">Double Metaphone</a></strong> (<a href="https://github.com/rockymadden/stringmetric/issues/6">Queued</a> phonetic metric and algorithm)</li>
 <li>
 <strong><a href="http://en.wikipedia.org/wiki/Hamming_distance">Hamming</a></strong> (Similarity metric)</li>
 <li>
@@ -54,11 +55,11 @@
 <li>
 <strong><a href="http://en.wikipedia.org/wiki/Metaphone">Metaphone</a></strong> (Phonetic metric and algorithm)</li>
 <li>
-<strong><a href="http://www.cs.cmu.edu/%7Epradeepr/papers/ijcai03.pdf">Monge-Elkan</a></strong> (Queued similarity metric)</li>
+<strong><a href="http://www.cs.cmu.edu/%7Epradeepr/papers/ijcai03.pdf">Monge-Elkan</a></strong> (<a href="https://github.com/rockymadden/stringmetric/issues/7">Queued</a> similarity metric)</li>
 <li>
-<strong><a href="http://en.wikipedia.org/wiki/Match_rating_approach">Match Rating Approach</a></strong> (Queued phonetic metric and algorithm)</li>
+<strong><a href="http://en.wikipedia.org/wiki/Match_rating_approach">Match Rating Approach</a></strong> (<a href="https://github.com/rockymadden/stringmetric/issues/8">Queued</a> phonetic metric and algorithm)</li>
 <li>
-<strong><a href="http://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm">Needleman-Wunch</a></strong> (Queued similarity metric)</li>
+<strong><a href="http://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm">Needleman-Wunch</a></strong> (<a href="https://github.com/rockymadden/stringmetric/issues/9">Queued</a> similarity metric)</li>
 <li>
 <strong><a href="http://en.wikipedia.org/wiki/N-gram">N-Gram</a></strong> (Similarity metric)</li>
 <li>
@@ -72,45 +73,47 @@
 <li>
 <strong><a href="http://ntz-develop.blogspot.com/2011/03/phonetic-algorithms.html">Refined Soundex</a></strong> (Phonetic metric and algorithm)</li>
 <li>
-<strong><a href="http://en.wikipedia.org/wiki/Tanimoto_coefficient">Tanimoto</a></strong> (Queued similarity metric)</li>
+<strong><a href="http://en.wikipedia.org/wiki/Tanimoto_coefficient">Tanimoto</a></strong> (<a href="https://github.com/rockymadden/stringmetric/issues/10">Queued</a> similarity metric)</li>
 <li>
-<strong><a href="http://en.wikipedia.org/wiki/Tversky_index">Tversky</a></strong> (Queued similarity metric)</li>
+<strong><a href="http://en.wikipedia.org/wiki/Tversky_index">Tversky</a></strong> (<a href="https://github.com/rockymadden/stringmetric/issues/16">Queued</a> similarity metric)</li>
 <li>
-<strong><a href="http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm">Smith-Waterman</a></strong> (Queued similarity metric)</li>
+<strong><a href="http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm">Smith-Waterman</a></strong> (<a href="https://github.com/rockymadden/stringmetric/issues/11">Queued</a> similarity metric)</li>
 <li>
 <strong><a href="http://en.wikipedia.org/wiki/Soundex">Soundex</a></strong> (Phonetic metric and algorithm)</li>
 <li>
 <strong>Weighted Levenshtein</strong> (Similarity metric)</li>
-</ul><h2>Depending upon</h2>
+</ul><h2>
+<a name="depending-upon" class="anchor" href="#depending-upon"><span class="octicon octicon-link"></span></a>Depending upon</h2>
 
-<p>The project is available on the <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.rockymadden.stringmetric%22">Maven Central Repository</a>. Here is how you would add a dependency to the core sub-project in various build systems (add other sub-projects as needed):</p>
+<p>The project is available on the <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.rockymadden.stringmetric%22">Maven Central Repository</a>. Adding a dependency to the core sub-project in various build systems (add other sub-projects as needed):</p>
 
 <p><strong>Simple Build Tool:</strong></p>
 
-<div class="highlight"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.25.3"</span>
+<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.25.3"</span>
 </pre></div>
 
 <hr><p><strong>Gradle:</strong></p>
 
-<div class="highlight"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.25.3'</span>
+<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.25.3'</span>
 </pre></div>
 
 <hr><p><strong>Maven:</strong></p>
 
-<div class="highlight"><pre><span class="nt">&lt;dependency&gt;</span>
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.rockymadden.stringmetric<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>stringmetric-core<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>0.25.3<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
 
-<h2>Similarity package</h2>
+<h2>
+<a name="similarity-package" class="anchor" href="#similarity-package"><span class="octicon octicon-link"></span></a>Similarity package</h2>
 
 <p>Useful for approximate string matching and measurement of string distance. Most metrics calculate the similarity of two strings as a double with a value between 0 and 1. A value of 0 being completely different and a value of 1 being completely similar.</p>
 
 <p><strong>Dice / Sorensen Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">DiceSorensenMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">DiceSorensenMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">DiceSorensenMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
 </pre></div>
 
@@ -122,7 +125,7 @@
 
 <hr><p><strong>Hamming Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">HammingMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"toned"</span><span class="o">,</span> <span class="s">"roses"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">HammingMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"toned"</span><span class="o">,</span> <span class="s">"roses"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">HammingMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"1011101"</span><span class="o">,</span> <span class="s">"1001001"</span><span class="o">))</span>
 </pre></div>
 
@@ -134,7 +137,7 @@
 
 <hr><p><strong>Jaccard Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaccardMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaccardMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">JaccardMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
 </pre></div>
 
@@ -146,7 +149,7 @@
 
 <hr><p><strong>Jaro Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"jones"</span><span class="o">,</span> <span class="s">"johnson"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"fvie"</span><span class="o">,</span> <span class="s">"ten"</span><span class="o">))</span>
 </pre></div>
@@ -160,7 +163,7 @@
 
 <hr><p><strong>Jaro-Winkler Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"jones"</span><span class="o">,</span> <span class="s">"johnson"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"fvie"</span><span class="o">,</span> <span class="s">"ten"</span><span class="o">))</span>
 </pre></div>
@@ -174,7 +177,7 @@
 
 <hr><p><strong>Levenshtein Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">LevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"sitting"</span><span class="o">,</span> <span class="s">"kitten"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">LevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"sitting"</span><span class="o">,</span> <span class="s">"kitten"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">LevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"cake"</span><span class="o">,</span> <span class="s">"drake"</span><span class="o">))</span>
 </pre></div>
 
@@ -186,7 +189,7 @@
 
 <hr><p><strong>N-Gram Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NGramMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NGramMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">NGramMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">2</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">NGramMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">2</span><span class="o">))</span>
 </pre></div>
@@ -200,7 +203,7 @@
 
 <hr><p><strong>Overlap Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">OverlapMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">OverlapMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">OverlapMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
 </pre></div>
 
@@ -212,7 +215,7 @@
 
 <hr><p><strong>Ratcliff/Obershelp Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RatcliffObershelpMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"aleksander"</span><span class="o">,</span> <span class="s">"alexandre"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RatcliffObershelpMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"aleksander"</span><span class="o">,</span> <span class="s">"alexandre"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">RatcliffObershelpMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"pennsylvania"</span><span class="o">,</span> <span class="s">"pencilvaneya"</span><span class="o">))</span>
 </pre></div>
 
@@ -224,7 +227,7 @@
 
 <hr><p><strong>Weighted Levenshtein Metric:</strong> <em>(Note you must specify the weight of each operation. Delete, insert, and then substitute. This can be done implicitly.)</em></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">WeightedLevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"book"</span><span class="o">,</span> <span class="s">"back"</span><span class="o">)(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">WeightedLevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"book"</span><span class="o">,</span> <span class="s">"back"</span><span class="o">)(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">WeightedLevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"hosp"</span><span class="o">,</span> <span class="s">"hospital"</span><span class="o">)(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">WeightedLevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"hospital"</span><span class="o">,</span> <span class="s">"hosp"</span><span class="o">)(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">))</span>
 </pre></div>
@@ -236,13 +239,14 @@
 40
 </code></pre>
 
-<h2>Phonetic package</h2>
+<h2>
+<a name="phonetic-package" class="anchor" href="#phonetic-package"><span class="octicon octicon-link"></span></a>Phonetic package</h2>
 
 <p>Useful for indexing by word pronunciation and performing sounds-like comparisons. All metrics return a boolean value indicating if the two strings sound the same, per the algorithm used. All metrics have an algorithm counterpart which provide the means to perform indexing by word pronunciation.</p>
 
 <p><strong>Metaphone Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"merci"</span><span class="o">,</span> <span class="s">"mercy"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"merci"</span><span class="o">,</span> <span class="s">"mercy"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">))</span>
 </pre></div>
 
@@ -254,7 +258,7 @@ false
 
 <hr><p><strong>Metaphone Algorithm:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"knuth"</span><span class="o">))</span>
 </pre></div>
 
@@ -266,7 +270,7 @@ n0
 
 <hr><p><strong>NYSIIS Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">NysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">))</span>
 </pre></div>
 
@@ -278,7 +282,7 @@ false
 
 <hr><p><strong>NYSIIS Algorithm:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">NysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"knuth"</span><span class="o">))</span>
 </pre></div>
 
@@ -290,7 +294,7 @@ nnat
 
 <hr><p><strong>Refined NYSIIS Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">))</span>
 </pre></div>
 
@@ -302,7 +306,7 @@ false
 
 <hr><p><strong>Refined NYSIIS Algorithm:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"westerlund"</span><span class="o">))</span>
 </pre></div>
 
@@ -314,7 +318,7 @@ wastarlad
 
 <hr><p><strong>Refined Soundex Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rubin"</span><span class="o">))</span>
 </pre></div>
 
@@ -326,7 +330,7 @@ false
 
 <hr><p><strong>Refined Soundex Algorithm:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"hairs"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"hairs"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"lambert"</span><span class="o">))</span>
 </pre></div>
 
@@ -338,7 +342,7 @@ l7081096
 
 <hr><p><strong>Soundex Metric:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">SoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">SoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">SoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rubin"</span><span class="o">))</span>
 </pre></div>
 
@@ -350,7 +354,7 @@ false
 
 <hr><p><strong>Soundex Algorithm:</strong></p>
 
-<div class="highlight"><pre><span class="n">println</span><span class="o">(</span><span class="nc">SoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"rupert"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">SoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"rupert"</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">SoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"lukasiewicz"</span><span class="o">))</span>
 </pre></div>
 
@@ -360,34 +364,36 @@ false
 l222
 </code></pre>
 
-<h2>Decorating</h2>
+<h2>
+<a name="decorating" class="anchor" href="#decorating"><span class="octicon octicon-link"></span></a>Decorating</h2>
 
-<p>It is possible to decorate algorithms and metrics with additional functionality. The most common decorations are filters, which are useful for filtering strings prior to evaluation (e.g. ignore case, ignore non-alpha, ignore spaces). <strong>NOTE:</strong> Memoization decorator queued.</p>
+<p>It is possible to decorate algorithms and metrics with additional functionality. The most common decorations are filters, which are useful for filtering strings prior to evaluation (e.g. ignore case, ignore non-alpha, ignore spaces). <strong>NOTE:</strong> <a href="https://github.com/rockymadden/stringmetric/issues/5">Memoization decorator queued</a></p>
 
 <p>Basic examples with no filtering:</p>
 
-<div class="highlight"><pre><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
 <span class="nc">JaroWinklerMetric</span><span class="o">().</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
 <span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
 </pre></div>
 
 <hr><p>Basic example with single filter:</p>
 
-<div class="highlight"><pre><span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span> <span class="k">with</span> <span class="nc">IgnoreAsciiLetterCaseFilter</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span> <span class="k">with</span> <span class="nc">IgnoreAsciiLetterCaseFilter</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
 </pre></div>
 
 <hr><p>Basic example with stacked filters. Filters are applied in reverse order:</p>
 
-<div class="highlight"><pre><span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span> <span class="k">with</span> <span class="nc">IgnoreAsciiLetterCaseFilter</span> <span class="k">with</span> <span class="nc">AsciiLetterOnlyFilter</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span> <span class="k">with</span> <span class="nc">IgnoreAsciiLetterCaseFilter</span> <span class="k">with</span> <span class="nc">AsciiLetterOnlyFilter</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
 </pre></div>
 
-<h2>Convenience objects</h2>
+<h2>
+<a name="convenience-objects" class="anchor" href="#convenience-objects"><span class="octicon octicon-link"></span></a>Convenience objects</h2>
 
 <p>Convenience objects are available to make interactions with the library easier.</p>
 
 <p><strong>StringAlgorithm:</strong></p>
 
-<div class="highlight"><pre><span class="c1">// Easy access to compute methods.</span>
+<div class="highlight highlight-scala"><pre><span class="c1">// Easy access to compute methods.</span>
 <span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithMetaphone</span><span class="o">(</span><span class="s">"string"</span><span class="o">)</span>
 
 <span class="c1">// Easy access to types and companion objects.</span>
@@ -396,7 +402,7 @@ l222
 
 <hr><p><strong>StringMetric:</strong></p>
 
-<div class="highlight"><pre><span class="c1">// Easy access to compare methods.</span>
+<div class="highlight highlight-scala"><pre><span class="c1">// Easy access to compare methods.</span>
 <span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaroWinkler</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
 
 <span class="c1">// Easy access to types and companion objects.</span>
@@ -405,12 +411,13 @@ l222
 
 <hr><p><strong>StringFilter:</strong></p>
 
-<div class="highlight"><pre><span class="c1">// Easy access to types and instances.</span>
+<div class="highlight highlight-scala"><pre><span class="c1">// Easy access to types and instances.</span>
 <span class="k">val</span> <span class="n">metaphone</span><span class="k">:</span> <span class="kt">StringAlgorithm.Metaphone</span> <span class="o">=</span> <span class="nc">StringAlgorithm</span><span class="o">.</span><span class="nc">Metaphone</span><span class="o">()</span> <span class="k">with</span> <span class="nc">StringFilter</span><span class="o">.</span><span class="n">asciiSpace</span>
 <span class="k">val</span> <span class="n">asciiSpace</span><span class="k">:</span> <span class="kt">StringFilter.AsciiSpace</span> <span class="o">=</span> <span class="nc">StringFilter</span><span class="o">.</span><span class="n">asciiSpace</span>
 </pre></div>
 
-<h2>Building the CLIs</h2>
+<h2>
+<a name="building-the-clis" class="anchor" href="#building-the-clis"><span class="octicon octicon-link"></span></a>Building the CLIs</h2>
 
 <p>When built, the CLI sub-project creates an individual shell command for each algorithm and metric. The sub-project is built via a Gradle task:</p>
 
@@ -423,12 +430,13 @@ gradle :stringmetric-cli:tar
 
 <p>To run a command from the current directory that you would be in from doing the above:</p>
 
-<pre lang="shell"><code>./cli/build/stringmetric-cli/jaroMetric abc xyz
+<pre lang="shell"><code>./cli/build/stringmetric-cli/jarometric abc xyz
 </code></pre>
 
 <p>Lastly, you may need to chmod the files because of the inability for Gradle to do so reliably.</p>
 
-<h2>Using the CLIs</h2>
+<h2>
+<a name="using-the-clis" class="anchor" href="#using-the-clis"><span class="octicon octicon-link"></span></a>Using the CLIs</h2>
 
 <p>Every metric and algorithm has a command line interface. Said code is housed in a separate sub-project called <code>stringmetric-cli</code>.</p>
 
@@ -472,44 +480,48 @@ true
 tk
 </code></pre>
 
-<h2>API</h2>
+<h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
 
 <p><a href="http://rockymadden.com/stringmetric/scaladoc/">Scaladoc</a> is available on the project website.</p>
 
-<h2>Requirements</h2>
+<h2>
+<a name="enhancements" class="anchor" href="#enhancements"><span class="octicon octicon-link"></span></a>Enhancements</h2>
+
+<p><a href="https://github.com/rockymadden/stringmetric/issues?labels=accepted%2Cenhancement&amp;page=1&amp;state=open">Issues labeled enhancement and accepted</a> indicate queued enhancements.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <ul>
 <li>Scala 2.10.x</li>
 <li>Gradle 1.x</li>
-</ul><h2>Versioning</h2>
+</ul><h2>
+<a name="versioning" class="anchor" href="#versioning"><span class="octicon octicon-link"></span></a>Versioning</h2>
 
 <p><a href="http://semver.org/">Semantic Versioning v2.0</a></p>
 
-<h2>License</h2>
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a></p>
       </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rockymadden">rockymadden</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-<script type="text/javascript">
-var _gap = _gap || [];
-_gap.push(["_setAccount", "UA-20432336-1"]); // CHANGE.
-_gap.push(["_trackPageview"]);
-_gap.push(["_gapTrackBounceViaTime", 10]);
-_gap.push(["_gapTrackReads", 20, 30]);
-_gap.push(["_gapTrackLinkClicks"]);
-_gapDebug = 1;
-
-(function() {
-    var gap = document.createElement("script");
-    gap.async = true;
-    gap.type = "text/javascript";
-    gap.src = "http://rockymadden.com/js/gap.min.js"; // CHANGE.
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gap, s);
-})();
-</script>
-
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20432336-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
 
   </body>
 </html>
