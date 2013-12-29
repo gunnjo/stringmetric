@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,7 +17,6 @@
       <header>
         <h1>stringmetric</h1>
         <p>String metrics and phonetic algorithms for Scala.</p>
-        <p><a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a></p>
 
         <p class="view"><a href="https://github.com/rockymadden/stringmetric">View the Project on GitHub <small>rockymadden/stringmetric</small></a></p>
 
@@ -29,8 +28,10 @@
         </ul>
       </header>
       <section>
-       
-<p>The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface. </p>
+        <h1>
+<a name="stringmetric-" class="anchor" href="#stringmetric-"><span class="octicon octicon-link"></span></a>stringmetric [<img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status">]</h1>
+
+<p>The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
 
 <ul>
 <li>
@@ -99,12 +100,12 @@
 
 <p><strong>Simple Build Tool:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.25.3"</span>
+<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.26.0"</span>
 </pre></div>
 
 <hr><p><strong>Gradle:</strong></p>
 
-<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.25.3'</span>
+<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.26.0'</span>
 </pre></div>
 
 <hr><p><strong>Maven:</strong></p>
@@ -112,321 +113,213 @@
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.rockymadden.stringmetric<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>stringmetric-core<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>0.25.3<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.26.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
 
-<h2>
+<hr><h2>
 <a name="similarity-package" class="anchor" href="#similarity-package"><span class="octicon octicon-link"></span></a>Similarity package</h2>
 
 <p>Useful for approximate string matching and measurement of string distance. Most metrics calculate the similarity of two strings as a double with a value between 0 and 1. A value of 0 being completely different and a value of 1 being completely similar.</p>
 
-<p><strong>Dice / Sorensen Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
+<hr><p><strong>Dice / Sorensen Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">DiceSorensenMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">DiceSorensenMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">DiceSorensenMetric</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)</span> <span class="c1">// 0.6</span>
+<span class="nc">DiceSorensenMetric</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)</span> <span class="c1">// 0.7142857142857143</span>
 </pre></div>
 
-<p>Output:</p>
-
-<pre><code>0.6
-0.7142857142857143
-</code></pre>
+<p><sup>Note you must specify the size of the n-gram you wish to use.</sup></p>
 
 <hr><p><strong>Hamming Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">HammingMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"toned"</span><span class="o">,</span> <span class="s">"roses"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">HammingMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"1011101"</span><span class="o">,</span> <span class="s">"1001001"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">HammingMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"toned"</span><span class="o">,</span> <span class="s">"roses"</span><span class="o">)</span> <span class="c1">// 3</span>
+<span class="nc">HammingMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"1011101"</span><span class="o">,</span> <span class="s">"1001001"</span><span class="o">)</span> <span class="c1">// 2</span>
 </pre></div>
 
-<p>Output: <em>(Note the exception of integers, rather than doubles, being returned.)</em></p>
+<p><sup>Note the exception of integers, rather than doubles, being returned.</sup></p>
 
-<pre><code>3
-2
-</code></pre>
+<hr><p><strong>Jaccard Metric:</strong></p>
 
-<hr><p><strong>Jaccard Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
-
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaccardMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">JaccardMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">JaccardMetric</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)</span> <span class="c1">// 0.3</span>
+<span class="nc">JaccardMetric</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)</span> <span class="c1">// 0.35714285714285715</span>
 </pre></div>
 
-<p>Output:</p>
-
-<pre><code>0.3
-0.35714285714285715
-</code></pre>
+<p><sup>Note you must specify the size of the n-gram you wish to use.</sup></p>
 
 <hr><p><strong>Jaro Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"jones"</span><span class="o">,</span> <span class="s">"johnson"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"fvie"</span><span class="o">,</span> <span class="s">"ten"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">)</span> <span class="c1">// 0.8222222222222223</span>
+<span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"jones"</span><span class="o">,</span> <span class="s">"johnson"</span><span class="o">)</span> <span class="c1">// 0.7904761904761904</span>
+<span class="nc">JaroMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"fvie"</span><span class="o">,</span> <span class="s">"ten"</span><span class="o">)</span> <span class="c1">// 0.0</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>0.8222222222222223
-0.7904761904761904
-0
-</code></pre>
 
 <hr><p><strong>Jaro-Winkler Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"jones"</span><span class="o">,</span> <span class="s">"johnson"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"fvie"</span><span class="o">,</span> <span class="s">"ten"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dwayne"</span><span class="o">,</span> <span class="s">"duane"</span><span class="o">)</span> <span class="c1">// 0.8400000000000001</span>
+<span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"jones"</span><span class="o">,</span> <span class="s">"johnson"</span><span class="o">)</span> <span class="c1">// 0.8323809523809523</span>
+<span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"fvie"</span><span class="o">,</span> <span class="s">"ten"</span><span class="o">)</span> <span class="c1">// 0.0</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>0.8400000000000001
-0.8323809523809523
-0
-</code></pre>
 
 <hr><p><strong>Levenshtein Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">LevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"sitting"</span><span class="o">,</span> <span class="s">"kitten"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">LevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"cake"</span><span class="o">,</span> <span class="s">"drake"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">LevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"sitting"</span><span class="o">,</span> <span class="s">"kitten"</span><span class="o">)</span> <span class="c1">// 3</span>
+<span class="nc">LevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"cake"</span><span class="o">,</span> <span class="s">"drake"</span><span class="o">)</span> <span class="c1">// 2</span>
 </pre></div>
 
-<p>Output: <em>(Note the exception of integers, rather than doubles, being returned.)</em></p>
+<p><sup>Note the exception of integers, rather than doubles, being returned.</sup></p>
 
-<pre><code>3
-2
-</code></pre>
+<hr><p><strong>N-Gram Metric:</strong></p>
 
-<hr><p><strong>N-Gram Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
-
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NGramMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">NGramMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">2</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">NGramMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">2</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">NGramMetric</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)</span> <span class="c1">// 0.6</span>
+<span class="nc">NGramMetric</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)</span> <span class="c1">// 0.25</span>
+<span class="nc">NGramMetric</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)</span> <span class="c1">// 0.5</span>
 </pre></div>
 
-<p>Output:</p>
+<p><sup>Note you must specify the size of the n-gram you wish to use.</sup></p>
 
-<pre><code>0.6
-0.25
-0.5
-</code></pre>
+<hr><p><strong>Overlap Metric:</strong></p>
 
-<hr><p><strong>Overlap Metric:</strong> <em>(Note you must specify the size of the n-gram you wish to use. This can be done implicitly.)</em></p>
-
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">OverlapMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">OverlapMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)(</span><span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">OverlapMetric</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"night"</span><span class="o">,</span> <span class="s">"nacht"</span><span class="o">)</span> <span class="c1">// 0.6</span>
+<span class="nc">OverlapMetric</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"context"</span><span class="o">,</span> <span class="s">"contact"</span><span class="o">)</span> <span class="c1">// 0.7142857142857143</span>
 </pre></div>
 
-<p>Output:</p>
-
-<pre><code>0.6
-0.7142857142857143
-</code></pre>
+<p><sup>Note you must specify the size of the n-gram you wish to use.</sup></p>
 
 <hr><p><strong>Ratcliff/Obershelp Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RatcliffObershelpMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"aleksander"</span><span class="o">,</span> <span class="s">"alexandre"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">RatcliffObershelpMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"pennsylvania"</span><span class="o">,</span> <span class="s">"pencilvaneya"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">RatcliffObershelpMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"aleksander"</span><span class="o">,</span> <span class="s">"alexandre"</span><span class="o">)</span> <span class="c1">// 0.7368421052631579</span>
+<span class="nc">RatcliffObershelpMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"pennsylvania"</span><span class="o">,</span> <span class="s">"pencilvaneya"</span><span class="o">)</span> <span class="c1">// 0.6666666666666666</span>
 </pre></div>
 
-<p>Output:</p>
+<hr><p><strong>Weighted Levenshtein Metric:</strong></p>
 
-<pre><code>0.7368421052631579
-0.6666666666666666
-</code></pre>
-
-<hr><p><strong>Weighted Levenshtein Metric:</strong> <em>(Note you must specify the weight of each operation. Delete, insert, and then substitute. This can be done implicitly.)</em></p>
-
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">WeightedLevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"book"</span><span class="o">,</span> <span class="s">"back"</span><span class="o">)(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">WeightedLevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"hosp"</span><span class="o">,</span> <span class="s">"hospital"</span><span class="o">)(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">WeightedLevenshteinMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"hospital"</span><span class="o">,</span> <span class="s">"hosp"</span><span class="o">)(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">WeightedLevenshteinMetric</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"book"</span><span class="o">,</span> <span class="s">"back"</span><span class="o">)</span> <span class="c1">// 2</span>
+<span class="nc">WeightedLevenshteinMetric</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"hosp"</span><span class="o">,</span> <span class="s">"hospital"</span><span class="o">)</span> <span class="c1">// 0.4</span>
+<span class="nc">WeightedLevenshteinMetric</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mf">0.1</span><span class="o">,</span> <span class="mi">1</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"hospital"</span><span class="o">,</span> <span class="s">"hosp"</span><span class="o">)</span> <span class="c1">// 40</span>
 </pre></div>
 
-<p>Output: <em>(Note that while a double is returned, it can be outside the range of 0 to 1, based upon the weights used.)</em></p>
+<p><sup>Note you must specify the weight of each operation. Delete, insert, and then substitute. Note that while a double is returned, it can be outside the range of 0 to 1, based upon the weights used.</sup></p>
 
-<pre><code>2
-0.4
-40
-</code></pre>
-
-<h2>
+<hr><h2>
 <a name="phonetic-package" class="anchor" href="#phonetic-package"><span class="octicon octicon-link"></span></a>Phonetic package</h2>
 
 <p>Useful for indexing by word pronunciation and performing sounds-like comparisons. All metrics return a boolean value indicating if the two strings sound the same, per the algorithm used. All metrics have an algorithm counterpart which provide the means to perform indexing by word pronunciation.</p>
 
-<p><strong>Metaphone Metric:</strong></p>
+<hr><p><strong>Metaphone Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"merci"</span><span class="o">,</span> <span class="s">"mercy"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"merci"</span><span class="o">,</span> <span class="s">"mercy"</span><span class="o">)</span> <span class="c1">// true</span>
+<span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">)</span> <span class="c1">// false</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>true
-false
-</code></pre>
 
 <hr><p><strong>Metaphone Algorithm:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"knuth"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">)</span> <span class="c1">// tm</span>
+<span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"knuth"</span><span class="o">)</span> <span class="c1">// n0</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>tm
-n0
-</code></pre>
 
 <hr><p><strong>NYSIIS Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">NysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">NysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">)</span> <span class="c1">// true</span>
+<span class="nc">NysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">)</span> <span class="c1">// false</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>true
-false
-</code></pre>
 
 <hr><p><strong>NYSIIS Algorithm:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">NysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">NysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"knuth"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">NysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">)</span> <span class="c1">// mcant</span>
+<span class="nc">NysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"knuth"</span><span class="o">)</span> <span class="c1">// nnat</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>mcant
-nnat
-</code></pre>
 
 <hr><p><strong>Refined NYSIIS Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">RefinedNysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"ham"</span><span class="o">,</span> <span class="s">"hum"</span><span class="o">)</span> <span class="c1">// true</span>
+<span class="nc">RefinedNysiisMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"dumb"</span><span class="o">,</span> <span class="s">"gum"</span><span class="o">)</span> <span class="c1">// false</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>true
-false
-</code></pre>
 
 <hr><p><strong>Refined NYSIIS Algorithm:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">RefinedNysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"westerlund"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">RefinedNysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"macintosh"</span><span class="o">)</span> <span class="c1">// mcantas</span>
+<span class="nc">RefinedNysiisAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"westerlund"</span><span class="o">)</span> <span class="c1">// wastarlad</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>mcantas
-wastarlad
-</code></pre>
 
 <hr><p><strong>Refined Soundex Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rubin"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">RefinedSoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">)</span> <span class="c1">// true</span>
+<span class="nc">RefinedSoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rubin"</span><span class="o">)</span> <span class="c1">// false</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>true
-false
-</code></pre>
 
 <hr><p><strong>Refined Soundex Algorithm:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"hairs"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">RefinedSoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"lambert"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">RefinedSoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"hairs"</span><span class="o">)</span> <span class="c1">// h093</span>
+<span class="nc">RefinedSoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"lambert"</span><span class="o">)</span> <span class="c1">// l7081096</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>h093
-l7081096
-</code></pre>
 
 <hr><p><strong>Soundex Metric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">SoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">SoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rubin"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">SoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rupert"</span><span class="o">)</span> <span class="c1">// true</span>
+<span class="nc">SoundexMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"robert"</span><span class="o">,</span> <span class="s">"rubin"</span><span class="o">)</span> <span class="c1">// false</span>
 </pre></div>
-
-<p>Output:</p>
-
-<pre><code>true
-false
-</code></pre>
 
 <hr><p><strong>Soundex Algorithm:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">println</span><span class="o">(</span><span class="nc">SoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"rupert"</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">SoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"lukasiewicz"</span><span class="o">))</span>
+<div class="highlight highlight-scala"><pre><span class="nc">SoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"rupert"</span><span class="o">)</span> <span class="c1">// r163</span>
+<span class="nc">SoundexAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"lukasiewicz"</span><span class="o">)</span> <span class="c1">// l222</span>
 </pre></div>
 
-<p>Output:</p>
-
-<pre><code>r163
-l222
-</code></pre>
-
-<h2>
+<hr><h2>
 <a name="decorating" class="anchor" href="#decorating"><span class="octicon octicon-link"></span></a>Decorating</h2>
 
-<p>It is possible to decorate algorithms and metrics with additional functionality. The most common decorations are filters, which are useful for filtering strings prior to evaluation (e.g. ignore case, ignore non-alpha, ignore spaces). <strong>NOTE:</strong> <a href="https://github.com/rockymadden/stringmetric/issues/5">Memoization decorator queued</a></p>
+<p>It is possible to decorate algorithms and metrics with additional functionality. This is provided by rich wrapping via implicits, and <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Algorithm.scala">StringAlgorithmDecorator</a>/<a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Metric.scala">StringMetricDecorator</a>. A handful of pre-built transforms are located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Transform.scala">transform module</a>.</p>
 
-<p>Basic examples with no filtering:</p>
+<hr><p>Non-decorated usage:</p>
 
-<div class="highlight highlight-scala"><pre><span class="nc">JaroWinklerMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
-<span class="nc">JaroWinklerMetric</span><span class="o">().</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
-<span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
+<span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
 </pre></div>
 
-<hr><p>Basic example with single filter:</p>
+<hr><p>Single filter, so that we only examine alphabetical characters:</p>
 
-<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span> <span class="k">with</span> <span class="nc">IgnoreAsciiLetterCaseFilter</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
+<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
 </pre></div>
 
-<hr><p>Basic example with stacked filters. Filters are applied in reverse order:</p>
+<hr><p>Functionally composed filter, so that we only examine uppercase characters:</p>
 
-<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="k">new</span> <span class="nc">JaroWinklerMetric</span> <span class="k">with</span> <span class="nc">IgnoreAsciiLetterCaseFilter</span> <span class="k">with</span> <span class="nc">AsciiLetterOnlyFilter</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="k">val</span> <span class="n">composedTransform</span> <span class="k">=</span> <span class="o">(</span><span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span> <span class="n">andThen</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterUpperCase</span><span class="o">)</span>
+
+<span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
+<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
 </pre></div>
 
-<h2>
+<hr><p>Make your own:</p>
+
+<div class="highlight highlight-scala"><pre><span class="c1">// StringTransform is a type alias for (Array[Char] =&gt; Array[Char])</span>
+<span class="k">val</span> <span class="n">myTransform</span><span class="k">:</span> <span class="kt">StringTransform</span> <span class="o">=</span> <span class="o">(</span><span class="n">ca</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">ca</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="o">==</span> <span class="-Symbol">'x</span><span class="err">'</span><span class="o">)</span>
+
+<span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="n">myTransform</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
+<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="n">myTransform</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
+</pre></div>
+
+<hr><h2>
 <a name="convenience-objects" class="anchor" href="#convenience-objects"><span class="octicon octicon-link"></span></a>Convenience objects</h2>
 
 <p>Convenience objects are available to make interactions with the library easier.</p>
 
 <p><strong>StringAlgorithm:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="c1">// Easy access to compute methods.</span>
-<span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithMetaphone</span><span class="o">(</span><span class="s">"string"</span><span class="o">)</span>
-
-<span class="c1">// Easy access to types and companion objects.</span>
-<span class="k">val</span> <span class="n">metaphone</span><span class="k">:</span> <span class="kt">StringAlgorithm.Metaphone</span> <span class="o">=</span> <span class="nc">StringAlgorithm</span><span class="o">.</span><span class="nc">Metaphone</span><span class="o">()</span>
+<div class="highlight highlight-scala"><pre><span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithMetaphone</span><span class="o">(</span><span class="s">"string"</span><span class="o">)</span>
 </pre></div>
+
+<p><sup>Located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Algorithm.scala">algorithm module</a>.</sup></p>
 
 <hr><p><strong>StringMetric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="c1">// Easy access to compare methods.</span>
-<span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaroWinkler</span><span class="o">(</span><span class="s">"string1"</span><span class="o">,</span> <span class="s">"string2"</span><span class="o">)</span>
-
-<span class="c1">// Easy access to types and companion objects.</span>
-<span class="k">val</span> <span class="n">jaro</span><span class="k">:</span> <span class="kt">StringMetric.Jaro</span> <span class="o">=</span> <span class="nc">StringMetric</span><span class="o">.</span><span class="nc">Jaro</span><span class="o">()</span>
+<div class="highlight highlight-scala"><pre><span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaccard</span><span class="o">(</span><span class="mi">1</span><span class="o">)(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
+<span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaroWinkler</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
 </pre></div>
 
-<hr><p><strong>StringFilter:</strong></p>
+<p><sup>Located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Metric.scala">metric module</a>.</sup></p>
 
-<div class="highlight highlight-scala"><pre><span class="c1">// Easy access to types and instances.</span>
-<span class="k">val</span> <span class="n">metaphone</span><span class="k">:</span> <span class="kt">StringAlgorithm.Metaphone</span> <span class="o">=</span> <span class="nc">StringAlgorithm</span><span class="o">.</span><span class="nc">Metaphone</span><span class="o">()</span> <span class="k">with</span> <span class="nc">StringFilter</span><span class="o">.</span><span class="n">asciiSpace</span>
-<span class="k">val</span> <span class="n">asciiSpace</span><span class="k">:</span> <span class="kt">StringFilter.AsciiSpace</span> <span class="o">=</span> <span class="nc">StringFilter</span><span class="o">.</span><span class="n">asciiSpace</span>
-</pre></div>
-
-<h2>
+<hr><h2>
 <a name="building-the-clis" class="anchor" href="#building-the-clis"><span class="octicon octicon-link"></span></a>Building the CLIs</h2>
 
 <p>When built, the CLI sub-project creates an individual shell command for each algorithm and metric. The sub-project is built via a Gradle task:</p>
@@ -436,7 +329,7 @@ cd stringmetric
 gradle :stringmetric-cli:tar
 </code></pre>
 
-<p>Running the <code>tar</code> task will create a compressed archive <strong>and</strong> an unarchived copy of the built files. The files can be found under the <code>build</code> directory that Gradle creates. The archive is named <code>stringmetric-cli.tar.gz</code> and the unarchived files can be found in the directory named <code>stringmetric-cli</code>. </p>
+<p>Running the <code>tar</code> task will create a compressed archive <strong>and</strong> an unarchived copy of the built files. The files can be found under the <code>build</code> directory that Gradle creates. The archive is named <code>stringmetric-cli.tar.gz</code> and the unarchived files can be found in the directory named <code>stringmetric-cli</code>.</p>
 
 <p>To run a command from the current directory that you would be in from doing the above:</p>
 
@@ -488,7 +381,7 @@ true
 tk
 </code></pre>
 
-<h2>
+<hr><h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <pre><code>The MIT License (MIT)
@@ -515,30 +408,20 @@ THE SOFTWARE.
 </code></pre>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://rockymadden.com/">rockymadden</a></p>
+        <p>This project is maintained by <a href="https://github.com/rockymadden">rockymadden</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-               <script type="text/javascript">
-var _gap = _gap || [];
-_gap.push(["_setAccount", "UA-20432336-1"]); // CHANGE.
-_gap.push(["_trackPageview"]);
-_gap.push(["_gapTrackBounceViaTime", 10]);
-_gap.push(["_gapTrackBounceViaScroll", 50]);
-_gap.push(["_gapTrackReads", 20, 30]);
-_gap.push(["_gapTrackLinkClicks"]);
-_gap.push(["_gapTrackMaxScroll", 25]);
-_gapDebug = true;
-
-(function() {
-    var gap = document.createElement("script");
-    gap.async = true;
-    gap.type = "text/javascript";
-    gap.src = "http://rockymadden.com/js/gap.min.js"; // CHANGE.
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gap, s);
-})();
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20432336-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
           </script>
 
   </body>
