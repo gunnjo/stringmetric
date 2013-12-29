@@ -2,18 +2,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>similarity - stringmetric scaladoc - com.rockymadden.stringmetric.similarity</title>
-          <meta name="description" content="similarity - stringmetric scaladoc - com.rockymadden.stringmetric.similarity" />
-          <meta name="keywords" content="similarity stringmetric scaladoc com.rockymadden.stringmetric.similarity" />
+          <title>similarity - stringmetric-core API - com.rockymadden.stringmetric.similarity</title>
+          <meta name="description" content="similarity - stringmetric - core API - com.rockymadden.stringmetric.similarity" />
+          <meta name="keywords" content="similarity stringmetric core API com.rockymadden.stringmetric.similarity" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
-      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
@@ -64,425 +59,70 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DiceSorensenMetricextendsStringMetric[Int,Double]"></a>
+      <a id="DiceSorensenMetricextendsMetric.StringMetric[Double]withProductwithSerializable"></a>
       <a id="DiceSorensenMetric:DiceSorensenMetric"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="DiceSorensenMetric.html"><span class="name">DiceSorensenMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+        <a href="DiceSorensenMetric.html"><span class="name">DiceSorensenMetric</span></a><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">An implementation of the Dice/Sorensen metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.DiceSorensenMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DiceSorensenMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="DiceSorensenMetricBenchmark:DiceSorensenMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="DiceSorensenMetricBenchmark.html"><span class="name">DiceSorensenMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.DiceSorensenMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="DiceSorensenMetricSpecextendsScalaTest"></a>
-      <a id="DiceSorensenMetricSpec:DiceSorensenMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="DiceSorensenMetricSpec.html"><span class="name">DiceSorensenMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.similarity.HammingMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HammingMetricextendsStringMetric[DummyImplicit,Int]"></a>
-      <a id="HammingMetric:HammingMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="HammingMetric.html"><span class="name">HammingMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An implementation of the Hamming metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.HammingMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HammingMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="HammingMetricBenchmark:HammingMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="HammingMetricBenchmark.html"><span class="name">HammingMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.HammingMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="HammingMetricSpecextendsScalaTest"></a>
-      <a id="HammingMetricSpec:HammingMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="HammingMetricSpec.html"><span class="name">HammingMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaccardMetricextendsStringMetric[Int,Double]"></a>
+      <a id="JaccardMetricextendsMetric.StringMetric[Double]withProductwithSerializable"></a>
       <a id="JaccardMetric:JaccardMetric"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="JaccardMetric.html"><span class="name">JaccardMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+        <a href="JaccardMetric.html"><span class="name">JaccardMetric</span></a><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaccardMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="JaccardMetricBenchmark:JaccardMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaccardMetricBenchmark.html"><span class="name">JaccardMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JaccardMetricSpecextendsScalaTest"></a>
-      <a id="JaccardMetricSpec:JaccardMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaccardMetricSpec.html"><span class="name">JaccardMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroMetricextendsStringMetric[DummyImplicit,Double]"></a>
-      <a id="JaroMetric:JaroMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroMetric.html"><span class="name">JaroMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An implementation of the Jaro metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="JaroMetricBenchmark:JaroMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroMetricBenchmark.html"><span class="name">JaroMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JaroMetricSpecextendsScalaTest"></a>
-      <a id="JaroMetricSpec:JaroMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroMetricSpec.html"><span class="name">JaroMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroWinklerMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroWinklerMetricextendsStringMetric[DummyImplicit,Double]"></a>
-      <a id="JaroWinklerMetric:JaroWinklerMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroWinklerMetric.html"><span class="name">JaroWinklerMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An implementation of the Jaro-Winkler metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroWinklerMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroWinklerMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="JaroWinklerMetricBenchmark:JaroWinklerMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroWinklerMetricBenchmark.html"><span class="name">JaroWinklerMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroWinklerMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JaroWinklerMetricSpecextendsScalaTest"></a>
-      <a id="JaroWinklerMetricSpec:JaroWinklerMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroWinklerMetricSpec.html"><span class="name">JaroWinklerMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.similarity.LevenshteinMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LevenshteinMetricextendsStringMetric[DummyImplicit,Int]"></a>
-      <a id="LevenshteinMetric:LevenshteinMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="LevenshteinMetric.html"><span class="name">LevenshteinMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An implementation of the Levenshtein metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.LevenshteinMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LevenshteinMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="LevenshteinMetricBenchmark:LevenshteinMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="LevenshteinMetricBenchmark.html"><span class="name">LevenshteinMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.LevenshteinMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="LevenshteinMetricSpecextendsScalaTest"></a>
-      <a id="LevenshteinMetricSpec:LevenshteinMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="LevenshteinMetricSpec.html"><span class="name">LevenshteinMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li><li name="com.rockymadden.stringmetric.similarity.NGramMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NGramMetricextendsStringMetric[Int,Double]"></a>
+      <a id="NGramMetricextendsMetric.StringMetric[Double]withProductwithSerializable"></a>
       <a id="NGramMetric:NGramMetric"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="NGramMetric.html"><span class="name">NGramMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An implementation of the N-Gram metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NGramMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="NGramMetricBenchmark:NGramMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
         <span class="modifier">final </span>
-        <span class="kind">class</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="NGramMetricBenchmark.html"><span class="name">NGramMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
+        <a href="NGramMetric.html"><span class="name">NGramMetric</span></a><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="NGramMetricSpecextendsScalaTest"></a>
-      <a id="NGramMetricSpec:NGramMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="NGramMetricSpec.html"><span class="name">NGramMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li><li name="com.rockymadden.stringmetric.similarity.OverlapMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OverlapMetricextendsStringMetric[Int,Double]"></a>
+      <a id="OverlapMetricextendsMetric.StringMetric[Double]withProductwithSerializable"></a>
       <a id="OverlapMetric:OverlapMetric"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="OverlapMetric.html"><span class="name">OverlapMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+        <a href="OverlapMetric.html"><span class="name">OverlapMetric</span></a><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.similarity.OverlapMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OverlapMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="OverlapMetricBenchmark:OverlapMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="OverlapMetricBenchmark.html"><span class="name">OverlapMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.OverlapMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="OverlapMetricSpecextendsScalaTest"></a>
-      <a id="OverlapMetricSpec:OverlapMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="OverlapMetricSpec.html"><span class="name">OverlapMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="com.rockymadden.stringmetric.similarity.RatcliffObershelpMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RatcliffObershelpMetricextendsStringMetric[DummyImplicit,Double]"></a>
-      <a id="RatcliffObershelpMetric:RatcliffObershelpMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="RatcliffObershelpMetric.html"><span class="name">RatcliffObershelpMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An implementation of the Ratcliff/Obershelp metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.RatcliffObershelpMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RatcliffObershelpMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="RatcliffObershelpMetricBenchmark:RatcliffObershelpMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="RatcliffObershelpMetricBenchmark.html"><span class="name">RatcliffObershelpMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.RatcliffObershelpMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="RatcliffObershelpMetricSpecextendsScalaTest"></a>
-      <a id="RatcliffObershelpMetricSpec:RatcliffObershelpMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="RatcliffObershelpMetricSpec.html"><span class="name">RatcliffObershelpMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li><li name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WeightedLevenshteinMetricextendsStringMetric[(scala.math.BigDecimal,scala.math.BigDecimal,scala.math.BigDecimal),Double]"></a>
+      <a id="WeightedLevenshteinMetricextendsMetric.StringMetric[Double]withProductwithSerializable"></a>
       <a id="WeightedLevenshteinMetric:WeightedLevenshteinMetric"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="WeightedLevenshteinMetric.html"><span class="name">WeightedLevenshteinMetric</span></a><span class="result"> extends <a href="../StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[(<span class="extype" name="scala.math.BigDecimal">BigDecimal</span>, <span class="extype" name="scala.math.BigDecimal">BigDecimal</span>, <span class="extype" name="scala.math.BigDecimal">BigDecimal</span>), <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An implementation of a weighted Levenshtein metric.</p>
-    </li><li name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WeightedLevenshteinMetricBenchmarkextendsSimpleBenchmarkwithCaliperBenchmark"></a>
-      <a id="WeightedLevenshteinMetricBenchmark:WeightedLevenshteinMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
         <span class="modifier">final </span>
-        <span class="kind">class</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="WeightedLevenshteinMetricBenchmark.html"><span class="name">WeightedLevenshteinMetricBenchmark</span></a><span class="result"> extends <span class="extype" name="com.google.caliper.SimpleBenchmark">SimpleBenchmark</span> with <a href="../CaliperBenchmark.html" class="extype" name="com.rockymadden.stringmetric.CaliperBenchmark">CaliperBenchmark</a></span>
+        <a href="WeightedLevenshteinMetric.html"><span class="name">WeightedLevenshteinMetric</span></a><span class="params">(<span name="delete">delete: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>, <span name="insert">insert: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>, <span name="substitute">substitute: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>)</span><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetricSpec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="WeightedLevenshteinMetricSpecextendsScalaTest"></a>
-      <a id="WeightedLevenshteinMetricSpec:WeightedLevenshteinMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="WeightedLevenshteinMetricSpec.html"><span class="name">WeightedLevenshteinMetricSpec</span></a><span class="result"> extends <a href="../ScalaTest.html" class="extype" name="com.rockymadden.stringmetric.ScalaTest">ScalaTest</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@RunWith</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li></ol>
             </div>
 
@@ -490,46 +130,7 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DiceSorensenMetric"></a>
-      <a id="DiceSorensenMetric:DiceSorensenMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="DiceSorensenMetric$.html"><span class="name">DiceSorensenMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.DiceSorensenMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DiceSorensenMetricBenchmark"></a>
-      <a id="DiceSorensenMetricBenchmark:DiceSorensenMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="DiceSorensenMetricBenchmark$.html"><span class="name">DiceSorensenMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.DiceSorensenMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DiceSorensenMetricSpec"></a>
-      <a id="DiceSorensenMetricSpec:DiceSorensenMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="DiceSorensenMetricSpec$.html"><span class="name">DiceSorensenMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.HammingMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.rockymadden.stringmetric.similarity.HammingMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HammingMetric"></a>
       <a id="HammingMetric:HammingMetric"></a>
       <h4 class="signature">
@@ -538,72 +139,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="HammingMetric$.html"><span class="name">HammingMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.HammingMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HammingMetricBenchmark"></a>
-      <a id="HammingMetricBenchmark:HammingMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="HammingMetricBenchmark$.html"><span class="name">HammingMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.HammingMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HammingMetricSpec"></a>
-      <a id="HammingMetricSpec:HammingMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="HammingMetricSpec$.html"><span class="name">HammingMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaccardMetric"></a>
-      <a id="JaccardMetric:JaccardMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="JaccardMetric$.html"><span class="name">JaccardMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaccardMetricBenchmark"></a>
-      <a id="JaccardMetricBenchmark:JaccardMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="JaccardMetricBenchmark$.html"><span class="name">JaccardMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaccardMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaccardMetricSpec"></a>
-      <a id="JaccardMetricSpec:JaccardMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="JaccardMetricSpec$.html"><span class="name">JaccardMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="HammingMetric$.html"><span class="name">HammingMetric</span></a><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -616,36 +152,10 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="JaroMetric$.html"><span class="name">JaroMetric</span></a>
+        <a href="JaroMetric$.html"><span class="name">JaroMetric</span></a><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroMetricBenchmark"></a>
-      <a id="JaroMetricBenchmark:JaroMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroMetricBenchmark$.html"><span class="name">JaroMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroMetricSpec"></a>
-      <a id="JaroMetricSpec:JaroMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroMetricSpec$.html"><span class="name">JaroMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
+      <p class="comment cmt">An implementation of the Jaro metric.</p>
     </li><li name="com.rockymadden.stringmetric.similarity.JaroWinklerMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="JaroWinklerMetric"></a>
       <a id="JaroWinklerMetric:JaroWinklerMetric"></a>
@@ -655,36 +165,10 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="JaroWinklerMetric$.html"><span class="name">JaroWinklerMetric</span></a>
+        <a href="JaroWinklerMetric$.html"><span class="name">JaroWinklerMetric</span></a><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroWinklerMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroWinklerMetricBenchmark"></a>
-      <a id="JaroWinklerMetricBenchmark:JaroWinklerMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroWinklerMetricBenchmark$.html"><span class="name">JaroWinklerMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.JaroWinklerMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JaroWinklerMetricSpec"></a>
-      <a id="JaroWinklerMetricSpec:JaroWinklerMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="JaroWinklerMetricSpec$.html"><span class="name">JaroWinklerMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
+      <p class="comment cmt">An implementation of the Jaro-Winkler metric.</p>
     </li><li name="com.rockymadden.stringmetric.similarity.LevenshteinMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LevenshteinMetric"></a>
       <a id="LevenshteinMetric:LevenshteinMetric"></a>
@@ -694,111 +178,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="LevenshteinMetric$.html"><span class="name">LevenshteinMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.LevenshteinMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LevenshteinMetricBenchmark"></a>
-      <a id="LevenshteinMetricBenchmark:LevenshteinMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="LevenshteinMetricBenchmark$.html"><span class="name">LevenshteinMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.LevenshteinMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LevenshteinMetricSpec"></a>
-      <a id="LevenshteinMetricSpec:LevenshteinMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="LevenshteinMetricSpec$.html"><span class="name">LevenshteinMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NGramMetric"></a>
-      <a id="NGramMetric:NGramMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="NGramMetric$.html"><span class="name">NGramMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NGramMetricBenchmark"></a>
-      <a id="NGramMetricBenchmark:NGramMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="NGramMetricBenchmark$.html"><span class="name">NGramMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.NGramMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NGramMetricSpec"></a>
-      <a id="NGramMetricSpec:NGramMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="NGramMetricSpec$.html"><span class="name">NGramMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.OverlapMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OverlapMetric"></a>
-      <a id="OverlapMetric:OverlapMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="OverlapMetric$.html"><span class="name">OverlapMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.OverlapMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OverlapMetricBenchmark"></a>
-      <a id="OverlapMetricBenchmark:OverlapMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="OverlapMetricBenchmark$.html"><span class="name">OverlapMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.OverlapMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OverlapMetricSpec"></a>
-      <a id="OverlapMetricSpec:OverlapMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="OverlapMetricSpec$.html"><span class="name">OverlapMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="LevenshteinMetric$.html"><span class="name">LevenshteinMetric</span></a><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -811,72 +191,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="RatcliffObershelpMetric$.html"><span class="name">RatcliffObershelpMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.RatcliffObershelpMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RatcliffObershelpMetricBenchmark"></a>
-      <a id="RatcliffObershelpMetricBenchmark:RatcliffObershelpMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="RatcliffObershelpMetricBenchmark$.html"><span class="name">RatcliffObershelpMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.RatcliffObershelpMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RatcliffObershelpMetricSpec"></a>
-      <a id="RatcliffObershelpMetricSpec:RatcliffObershelpMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="RatcliffObershelpMetricSpec$.html"><span class="name">RatcliffObershelpMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WeightedLevenshteinMetric"></a>
-      <a id="WeightedLevenshteinMetric:WeightedLevenshteinMetric"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="WeightedLevenshteinMetric$.html"><span class="name">WeightedLevenshteinMetric</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetricBenchmark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WeightedLevenshteinMetricBenchmark"></a>
-      <a id="WeightedLevenshteinMetricBenchmark:WeightedLevenshteinMetricBenchmark"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="WeightedLevenshteinMetricBenchmark$.html"><span class="name">WeightedLevenshteinMetricBenchmark</span></a><span class="result"> extends <a href="../CaliperRunner.html" class="extype" name="com.rockymadden.stringmetric.CaliperRunner">CaliperRunner</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetricSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WeightedLevenshteinMetricSpec"></a>
-      <a id="WeightedLevenshteinMetricSpec:WeightedLevenshteinMetricSpec"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="WeightedLevenshteinMetricSpec$.html"><span class="name">WeightedLevenshteinMetricSpec</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RatcliffObershelpMetric$.html"><span class="name">RatcliffObershelpMetric</span></a><span class="result"> extends <a href="../Metric$$StringMetric.html" class="extype" name="com.rockymadden.stringmetric.Metric.StringMetric">StringMetric</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -905,7 +220,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-
-
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
     </body>
       </html>
