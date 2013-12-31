@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -18,7 +18,6 @@
         <h1>stringmetric</h1>
         <p>String metrics and phonetic algorithms for Scala.</p>
 
-        <p><a href="https://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a></p>
         <p class="view"><a href="https://github.com/rockymadden/stringmetric">View the Project on GitHub <small>rockymadden/stringmetric</small></a></p>
 
 
@@ -29,7 +28,9 @@
         </ul>
       </header>
       <section>
-      
+        <h1>
+<a name="stringmetric-" class="anchor" href="#stringmetric-"><span class="octicon octicon-link"></span></a>stringmetric <a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a>
+</h1>
 
 <p>The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
 
@@ -100,12 +101,12 @@
 
 <p><strong>Simple Build Tool:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.26.0"</span>
+<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.26.1"</span>
 </pre></div>
 
 <hr><p><strong>Gradle:</strong></p>
 
-<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.26.0'</span>
+<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.26.1'</span>
 </pre></div>
 
 <hr><p><strong>Maven:</strong></p>
@@ -113,7 +114,7 @@
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.rockymadden.stringmetric<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>stringmetric-core<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>0.26.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.26.1<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
 
@@ -282,9 +283,9 @@
 <span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
 </pre></div>
 
-<hr><p>Functionally composed filter, so that we only examine uppercase characters:</p>
+<hr><p>Functionally composed filter, so that we only examine alphabetical characters but the case won't matter:</p>
 
-<div class="highlight highlight-scala"><pre><span class="k">val</span> <span class="n">composedTransform</span> <span class="k">=</span> <span class="o">(</span><span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span> <span class="n">andThen</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterUpperCase</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="k">val</span> <span class="n">composedTransform</span> <span class="k">=</span> <span class="o">(</span><span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span> <span class="n">andThen</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">ignoreAlphaCase</span><span class="o">)</span>
 
 <span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
 <span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
@@ -322,26 +323,22 @@
 <hr><h2>
 <a name="building-the-clis" class="anchor" href="#building-the-clis"><span class="octicon octicon-link"></span></a>Building the CLIs</h2>
 
-<p>When built, the CLI sub-project creates an individual shell command for each algorithm and metric. The sub-project is built via a Gradle task:</p>
-
-<pre lang="shell"><code>git clone https://github.com/rockymadden/stringmetric.git
-cd stringmetric
-gradle :stringmetric-cli:tar
+<pre lang="shell"><code>$ git clone https://github.com/rockymadden/stringmetric.git
+$ cd stringmetric
+$ gradle :stringmetric-cli:tar
 </code></pre>
 
-<p>Running the <code>tar</code> task will create a compressed archive <strong>and</strong> an unarchived copy of the built files. The files can be found under the <code>build</code> directory that Gradle creates. The archive is named <code>stringmetric-cli.tar.gz</code> and the unarchived files can be found in the directory named <code>stringmetric-cli</code>.</p>
+<p>Running the <code>tar</code> task will create a compressed archive and an unarchived copy of the built algorithms and metrics. The files can be found under the <code>build</code> directory that Gradle creates. The archive is named <code>stringmetric-cli.tar.gz</code> and the unarchived files can be found in the directory named <code>stringmetric-cli</code>. You may need to chmod the files because of the inability for Gradle to do so reliably</p>
 
-<p>To run a command from the current directory that you would be in from doing the above:</p>
+<hr><p>To run a command from the current directory that you would be in from doing the above:</p>
 
-<pre lang="shell"><code>./cli/build/stringmetric-cli/jarometric abc xyz
+<pre lang="shell"><code>$ ./cli/build/stringmetric-cli/jarometric abc xyz
 </code></pre>
 
-<p>Lastly, you may need to chmod the files because of the inability for Gradle to do so reliably.</p>
-
-<h2>
+<hr><h2>
 <a name="using-the-clis" class="anchor" href="#using-the-clis"><span class="octicon octicon-link"></span></a>Using the CLIs</h2>
 
-<p>The help option prints command syntax and usage:</p>
+<p>Get help:</p>
 
 <pre lang="shell"><code>$ metaphonemetric --help
 Compares two strings to determine if they are phonetically similarly, per the Metaphone algorithm.
@@ -354,28 +351,13 @@ Options:
     Outputs description, syntax, and options.
 </code></pre>
 
-<pre lang="shell"><code>$ jarowinklermetric --help
-Compares two strings to calculate the Jaro-Winkler distance.
-
-Syntax:
-  jarowinklermetric [Options] string1 string2...
-
-Options:
-  -h, --help
-    Outputs description, syntax, and options.
-</code></pre>
-
-<hr><p>Compare "dog" to "dawg":</p>
-
-<pre lang="shell"><code>$ metaphonemetric dog dawg
-true
-</code></pre>
+<hr><p>Get comparison with metrics:</p>
 
 <pre lang="shell"><code>$ jarowinklermetric dog dawg
 0.75
 </code></pre>
 
-<hr><p>Get the phonetic representation of "dog" using the Metaphone phonetic algorithm:</p>
+<hr><p>Get representation with phonetic algorithms:</p>
 
 <pre lang="shell"><code>$ metaphonealgorithm dog
 tk
@@ -408,30 +390,20 @@ THE SOFTWARE.
 </code></pre>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://rockymadden.com/">rockymadden</a></p>
+        <p>This project is maintained by <a href="https://github.com/rockymadden">rockymadden</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
-var _gap = _gap || [];
-_gap.push(["_setAccount", "UA-20432336-1"]); // CHANGE.
-_gap.push(["_trackPageview"]);
-_gap.push(["_gapTrackBounceViaTime", 10]);
-_gap.push(["_gapTrackBounceViaScroll", 50]);
-_gap.push(["_gapTrackReads", 20, 30]);
-_gap.push(["_gapTrackLinkClicks"]);
-_gap.push(["_gapTrackMaxScroll", 25]);
-_gapDebug = true;
-
-(function() {
-    var gap = document.createElement("script");
-    gap.async = true;
-    gap.type = "text/javascript";
-    gap.src = "http://rockymadden.com/js/gap.min.js"; // CHANGE.
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gap, s);
-})();
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20432336-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
           </script>
 
   </body>
