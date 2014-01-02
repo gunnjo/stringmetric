@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -18,7 +18,6 @@
         <h1>stringmetric</h1>
         <p>String metrics and phonetic algorithms for Scala.</p>
 
-        <p><a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a></p>
         <p class="view"><a href="https://github.com/rockymadden/stringmetric">View the Project on GitHub <small>rockymadden/stringmetric</small></a></p>
 
 
@@ -29,12 +28,15 @@
         </ul>
       </header>
       <section>
+        <h1>
+<a name="stringmetric-" class="anchor" href="#stringmetric-"><span class="octicon octicon-link"></span></a>stringmetric <a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a>
+</h1>
 
-<p>The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
+<p>String metrics and phonetic algorithms for Scala. The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
 
 <ul>
 <li>
-<strong>Requirements:</strong> Scala 2.10.x and, if building yourself, Gradle 1.8+</li>
+<strong>Requirements:</strong> Scala 2.10+</li>
 <li>
 <strong>Documentation:</strong> <a href="http://rockymadden.com/stringmetric/scaladoc/">Scaladoc</a>
 </li>
@@ -99,20 +101,20 @@
 
 <p><strong>Simple Build Tool:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.26.1"</span>
+<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core_2.10"</span> <span class="o">%</span> <span class="s">"0.27.0"</span>
 </pre></div>
 
 <hr><p><strong>Gradle:</strong></p>
 
-<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core:0.26.1'</span>
+<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core_2.10:0.27.0'</span>
 </pre></div>
 
 <hr><p><strong>Maven:</strong></p>
 
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.rockymadden.stringmetric<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>stringmetric-core<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>0.26.1<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>stringmetric-core_2.10<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.27.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
 
@@ -322,15 +324,13 @@
 <a name="building-the-clis" class="anchor" href="#building-the-clis"><span class="octicon octicon-link"></span></a>Building the CLIs</h2>
 
 <pre lang="shell"><code>$ git clone https://github.com/rockymadden/stringmetric.git
-$ cd stringmetric
-$ gradle :stringmetric-cli:tar
+$ cd stringmetric/project
+$ ./build.sh
 </code></pre>
-
-<p>Running the <code>tar</code> task will create a compressed archive and an unarchived copy of the built algorithms and metrics. The files can be found under the <code>build</code> directory that Gradle creates. The archive is named <code>stringmetric-cli.tar.gz</code> and the unarchived files can be found in the directory named <code>stringmetric-cli</code>. You may need to chmod the files because of the inability for Gradle to do so reliably</p>
 
 <hr><p>To run a command from the current directory that you would be in from doing the above:</p>
 
-<pre lang="shell"><code>$ ./cli/build/stringmetric-cli/jarometric abc xyz
+<pre lang="shell"><code>$ ../target/cli/jarometric abc xyz
 </code></pre>
 
 <hr><h2>
@@ -388,30 +388,21 @@ THE SOFTWARE.
 </code></pre>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://rockymadden.com/">rockymadden</a></p>
+        <p>This project is maintained by <a href="https://github.com/rockymadden">rockymadden</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-<script type="text/javascript">
-var _gap = _gap || [];
-_gap.push(["_setAccount", "UA-20432336-1"]); // CHANGE.
-_gap.push(["_trackPageview"]);
-_gap.push(["_gapTrackBounceViaTime", 10]);
-_gap.push(["_gapTrackBounceViaScroll", 50]);
-_gap.push(["_gapTrackReads", 20, 30]);
-_gap.push(["_gapTrackLinkClicks"]);
-_gap.push(["_gapTrackMaxScroll", 25]);
-_gapDebug = true;
-
-(function() {
-    var gap = document.createElement("script");
-    gap.async = true;
-    gap.type = "text/javascript";
-    gap.src = "http://rockymadden.com/js/gap.min.js"; // CHANGE.
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gap, s);
-})();
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20432336-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
