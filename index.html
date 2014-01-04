@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -18,8 +18,6 @@
         <h1>stringmetric</h1>
         <p>String metrics and phonetic algorithms for Scala.</p>
 
-<p><a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a>
-</p>
         <p class="view"><a href="https://github.com/rockymadden/stringmetric">View the Project on GitHub <small>rockymadden/stringmetric</small></a></p>
 
 
@@ -30,8 +28,11 @@
         </ul>
       </header>
       <section>
+        <h1>
+<a name="stringmetric-" class="anchor" href="#stringmetric-"><span class="octicon octicon-link"></span></a>stringmetric <a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a>
+</h1>
 
-<p>The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
+<p>String metrics and phonetic algorithms for Scala. The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
 
 <ul>
 <li>
@@ -100,12 +101,12 @@
 
 <p><strong>Simple Build Tool:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%</span> <span class="s">"stringmetric-core_2.10"</span> <span class="o">%</span> <span class="s">"0.27.0"</span>
+<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.27.1"</span>
 </pre></div>
 
 <hr><p><strong>Gradle:</strong></p>
 
-<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core_2.10:0.27.0'</span>
+<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core_2.10:0.27.1'</span>
 </pre></div>
 
 <hr><p><strong>Maven:</strong></p>
@@ -113,7 +114,7 @@
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.rockymadden.stringmetric<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>stringmetric-core_2.10<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>0.27.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.27.1<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
 
@@ -268,12 +269,20 @@
 <hr><h2>
 <a name="decorating" class="anchor" href="#decorating"><span class="octicon octicon-link"></span></a>Decorating</h2>
 
-<p>It is possible to decorate algorithms and metrics with additional functionality. This is provided by rich wrapping via implicits, and <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Algorithm.scala">StringAlgorithmDecorator</a>/<a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Metric.scala">StringMetricDecorator</a>. A handful of pre-built transforms are located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Transform.scala">transform module</a>.</p>
+<p>It is possible to decorate algorithms and metrics with additional functionality, this is provided by rich wrapping via implicits. Decorations include (you can mix and match):</p>
 
-<hr><p>Non-decorated usage:</p>
+<ul>
+<li><p><strong>withTransform:</strong> Transform arguments prior to computation/comparison. A handful of pre-built transforms are located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/src/main/scala/com/rockymadden/stringmetric/Transform.scala">transform module</a>.</p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Memoization">withMemoization</a>:</strong> All computations/comparisons are cached. Any further calls made with identical arguments will be looked up, rather than computed/compared.</p></li>
+</ul><hr><p>Non-decorated usage:</p>
 
 <div class="highlight highlight-scala"><pre><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
 <span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
+</pre></div>
+
+<hr><p>Memoized:</p>
+
+<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withMemoization</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
 </pre></div>
 
 <hr><p>Single filter, so that we only examine alphabetical characters:</p>
@@ -309,27 +318,24 @@
 <div class="highlight highlight-scala"><pre><span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithMetaphone</span><span class="o">(</span><span class="s">"string"</span><span class="o">)</span>
 </pre></div>
 
-<p><sup>Located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Algorithm.scala">algorithm module</a>.</sup></p>
-
 <hr><p><strong>StringMetric:</strong></p>
 
 <div class="highlight highlight-scala"><pre><span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaccard</span><span class="o">(</span><span class="mi">1</span><span class="o">)(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
 <span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaroWinkler</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
 </pre></div>
 
-<p><sup>Located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/source/main/scala/com/rockymadden/stringmetric/Metric.scala">metric module</a>.</sup></p>
-
 <hr><h2>
 <a name="building-the-clis" class="anchor" href="#building-the-clis"><span class="octicon octicon-link"></span></a>Building the CLIs</h2>
 
 <pre lang="shell"><code>$ git clone https://github.com/rockymadden/stringmetric.git
-$ cd stringmetric/project
-$ ./build.sh
+$ cd stringmetric
+$ sbt clean package
+$ ./project/build.sh
 </code></pre>
 
 <hr><p>To run a command from the current directory that you would be in from doing the above:</p>
 
-<pre lang="shell"><code>$ ../target/cli/jarometric abc xyz
+<pre lang="shell"><code>$ ./target/cli/jarometric abc xyz
 </code></pre>
 
 <hr><h2>
@@ -387,30 +393,20 @@ THE SOFTWARE.
 </code></pre>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://rockymadden.com/">rockymadden</a></p>
+        <p>This project is maintained by <a href="https://github.com/rockymadden">rockymadden</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
-var _gap = _gap || [];
-_gap.push(["_setAccount", "UA-20432336-1"]); // CHANGE.
-_gap.push(["_trackPageview"]);
-_gap.push(["_gapTrackBounceViaTime", 10]);
-_gap.push(["_gapTrackBounceViaScroll", 50]);
-_gap.push(["_gapTrackReads", 20, 30]);
-_gap.push(["_gapTrackLinkClicks"]);
-_gap.push(["_gapTrackMaxScroll", 25]);
-_gapDebug = true;
-
-(function() {
-    var gap = document.createElement("script");
-    gap.async = true;
-    gap.type = "text/javascript";
-    gap.src = "http://rockymadden.com/js/gap.min.js"; // CHANGE.
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gap, s);
-})();
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20432336-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
           </script>
 
   </body>
