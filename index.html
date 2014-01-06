@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>stringmetric - String metrics and phonetic algorithms for Scala</title>
+    <title>stringmetric by rockymadden</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,8 +17,7 @@
       <header>
         <h1>stringmetric</h1>
         <p>String metrics and phonetic algorithms for Scala.</p>
-<p><a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a>
-</p>
+
         <p class="view"><a href="https://github.com/rockymadden/stringmetric">View the Project on GitHub <small>rockymadden/stringmetric</small></a></p>
 
 
@@ -29,8 +28,11 @@
         </ul>
       </header>
       <section>
+        <h1>
+<a name="stringmetric-" class="anchor" href="#stringmetric-"><span class="octicon octicon-link"></span></a>stringmetric <a href="http://travis-ci.org/rockymadden/stringmetric"><img src="https://travis-ci.org/rockymadden/stringmetric.png?branch=master" alt="Build Status"></a>
+</h1>
 
-<p>The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
+<p>String metrics and phonetic algorithms for Scala. The library provides facilities to perform approximate string matching, measurement of string similarity/distance, indexing by word pronunciation, and sounds-like comparisons. In addition to the core library, each metric and algorithm has a command line interface.</p>
 
 <ul>
 <li>
@@ -95,16 +97,14 @@
 </ul><h2>
 <a name="depending-upon" class="anchor" href="#depending-upon"><span class="octicon octicon-link"></span></a>Depending upon</h2>
 
-<p>The project is available on the <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.rockymadden.stringmetric%22">Maven Central Repository</a>. Adding a dependency to the core sub-project in various build systems (add other sub-projects as needed):</p>
+<p><strong>SBT:</strong></p>
 
-<p><strong>Simple Build Tool:</strong></p>
-
-<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.27.1"</span>
+<div class="highlight highlight-scala"><pre><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"com.rockymadden.stringmetric"</span> <span class="o">%%</span> <span class="s">"stringmetric-core"</span> <span class="o">%</span> <span class="s">"0.27.2"</span>
 </pre></div>
 
 <hr><p><strong>Gradle:</strong></p>
 
-<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core_2.10:0.27.1'</span>
+<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.rockymadden.stringmetric:stringmetric-core_2.10:0.27.2'</span>
 </pre></div>
 
 <hr><p><strong>Maven:</strong></p>
@@ -112,7 +112,7 @@
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.rockymadden.stringmetric<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>stringmetric-core_2.10<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>0.27.1<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.27.2<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
 
@@ -265,61 +265,64 @@
 </pre></div>
 
 <hr><h2>
-<a name="decorating" class="anchor" href="#decorating"><span class="octicon octicon-link"></span></a>Decorating</h2>
-
-<p>It is possible to decorate algorithms and metrics with additional functionality, this is provided by rich wrapping via implicits. Decorations include (you can mix and match):</p>
-
-<ul>
-<li><p><strong>withTransform:</strong> Transform arguments prior to computation/comparison. A handful of pre-built transforms are located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/src/main/scala/com/rockymadden/stringmetric/Transform.scala">transform module</a>.</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/Memoization">withMemoization</a>:</strong> All computations/comparisons are cached. Any further calls made with identical arguments will be looked up, rather than computed/compared.</p></li>
-</ul><hr><p>Non-decorated usage:</p>
-
-<div class="highlight highlight-scala"><pre><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
-<span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
-</pre></div>
-
-<hr><p>Memoized:</p>
-
-<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withMemoization</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
-</pre></div>
-
-<hr><p>Single filter, so that we only examine alphabetical characters:</p>
-
-<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
-<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
-</pre></div>
-
-<hr><p>Functionally composed filter, so that we only examine alphabetical characters but the case won't matter:</p>
-
-<div class="highlight highlight-scala"><pre><span class="k">val</span> <span class="n">composedTransform</span> <span class="k">=</span> <span class="o">(</span><span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span> <span class="n">andThen</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">ignoreAlphaCase</span><span class="o">)</span>
-
-<span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
-<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
-</pre></div>
-
-<hr><p>Make your own:</p>
-
-<div class="highlight highlight-scala"><pre><span class="c1">// StringTransform is a type alias for (Array[Char] =&gt; Array[Char])</span>
-<span class="k">val</span> <span class="n">myTransform</span><span class="k">:</span> <span class="kt">StringTransform</span> <span class="o">=</span> <span class="o">(</span><span class="n">ca</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">ca</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="o">==</span> <span class="-Symbol">'x</span><span class="err">'</span><span class="o">)</span>
-
-<span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="n">myTransform</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">)</span>
-<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="n">myTransform</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
-</pre></div>
-
-<hr><h2>
 <a name="convenience-objects" class="anchor" href="#convenience-objects"><span class="octicon octicon-link"></span></a>Convenience objects</h2>
-
-<p>Convenience objects are available to make interactions with the library easier.</p>
 
 <p><strong>StringAlgorithm:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithMetaphone</span><span class="o">(</span><span class="s">"string"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithMetaphone</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
+<span class="nc">StringAlgorithm</span><span class="o">.</span><span class="n">computeWithNysiis</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
 </pre></div>
 
 <hr><p><strong>StringMetric:</strong></p>
 
-<div class="highlight highlight-scala"><pre><span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaccard</span><span class="o">(</span><span class="mi">1</span><span class="o">)(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
-<span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaroWinkler</span><span class="o">(</span><span class="s">"abc123"</span><span class="o">,</span> <span class="s">"abc456"</span><span class="o">)</span>
+<div class="highlight highlight-scala"><pre><span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaccard</span><span class="o">(</span><span class="mi">1</span><span class="o">)(</span><span class="s">"abcdef"</span><span class="o">,</span> <span class="s">"abcxyz"</span><span class="o">)</span>
+<span class="nc">StringMetric</span><span class="o">.</span><span class="n">compareWithJaroWinkler</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">,</span> <span class="s">"abcxyz"</span><span class="o">)</span>
+</pre></div>
+
+<hr><h2>
+<a name="decorating" class="anchor" href="#decorating"><span class="octicon octicon-link"></span></a>Decorating</h2>
+
+<p>It is possible to decorate algorithms and metrics with additional functionality, which you can mix and match. Decorations include:</p>
+
+<ul>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Memoization">withMemoization</a>:</strong> Computations and comparisons are cached. Future calls made with identical arguments will be looked up, rather than computed.</p></li>
+<li><p><strong>withTransform:</strong> Transform arguments prior to computation/comparison. A handful of pre-built transforms are located in the <a href="https://github.com/rockymadden/stringmetric/blob/master/core/src/main/scala/com/rockymadden/stringmetric/Transform.scala">transform module</a>.</p></li>
+</ul><hr><p>Non-decorated:</p>
+
+<div class="highlight highlight-scala"><pre><span class="nc">MetaphoneAlgorithm</span><span class="o">.</span><span class="n">compute</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
+<span class="nc">MetaphoneMetric</span><span class="o">.</span><span class="n">compare</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">,</span> <span class="s">"abcxyz"</span><span class="o">)</span>
+</pre></div>
+
+<hr><p>Using a transform so that we only examine alphabetical characters:</p>
+
+<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
+<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">,</span> <span class="s">"abcxyz"</span><span class="o">)</span>
+</pre></div>
+
+<hr><p>Using a functionally composed transform so that we only examine alphabetical characters, but the case will not matter:</p>
+
+<div class="highlight highlight-scala"><pre><span class="k">val</span> <span class="n">composedTransform</span> <span class="k">=</span> <span class="o">(</span><span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span> <span class="n">andThen</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">ignoreAlphaCase</span><span class="o">)</span>
+
+<span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
+<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="n">composedTransform</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">,</span> <span class="s">"abcxyz"</span><span class="o">)</span>
+</pre></div>
+
+<hr><p>Making your own transform:</p>
+
+<div class="highlight highlight-scala"><pre><span class="k">val</span> <span class="n">myTransform</span><span class="k">:</span> <span class="kt">StringTransform</span> <span class="o">=</span> <span class="o">(</span><span class="n">ca</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">ca</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="o">==</span> <span class="-Symbol">'x</span><span class="err">'</span><span class="o">)</span>
+
+<span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withTransform</span> <span class="n">myTransform</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
+<span class="o">(</span><span class="nc">MetaphoneMetric</span> <span class="n">withTransform</span> <span class="n">myTransform</span><span class="o">).</span><span class="n">compare</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">,</span> <span class="s">"abcxyz"</span><span class="o">)</span>
+</pre></div>
+
+<hr><p>Using memoization:</p>
+
+<div class="highlight highlight-scala"><pre><span class="o">(</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withMemoization</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
+</pre></div>
+
+<hr><p>Using memoization and a transform:</p>
+
+<div class="highlight highlight-scala"><pre><span class="o">((</span><span class="nc">MetaphoneAlgorithm</span> <span class="n">withMemoization</span><span class="o">)</span> <span class="n">withTransform</span> <span class="nc">StringTransform</span><span class="o">.</span><span class="n">filterAlpha</span><span class="o">).</span><span class="n">compute</span><span class="o">(</span><span class="s">"abcdef"</span><span class="o">)</span>
 </pre></div>
 
 <hr><h2>
@@ -329,11 +332,7 @@
 $ cd stringmetric
 $ sbt clean package
 $ ./project/build.sh
-</code></pre>
-
-<hr><p>To run a command from the current directory that you would be in from doing the above:</p>
-
-<pre lang="shell"><code>$ ./target/cli/jarometric abc xyz
+$ ./target/cli/jarometric abc xyz
 </code></pre>
 
 <hr><h2>
@@ -352,13 +351,13 @@ Options:
     Outputs description, syntax, and options.
 </code></pre>
 
-<hr><p>Get comparison with metrics:</p>
+<hr><p>Get comparison value with metrics:</p>
 
 <pre lang="shell"><code>$ jarowinklermetric dog dawg
 0.75
 </code></pre>
 
-<hr><p>Get representation with phonetic algorithms:</p>
+<hr><p>Get representation value with phonetic algorithms:</p>
 
 <pre lang="shell"><code>$ metaphonealgorithm dog
 tk
@@ -391,31 +390,21 @@ THE SOFTWARE.
 </code></pre>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://rockymadden.com/">rockymadden</a></p>
+        <p>This project is maintained by <a href="https://github.com/rockymadden">rockymadden</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-<script type="text/javascript">
-var _gap = _gap || [];
-_gap.push(["_setAccount", "UA-20432336-1"]);
-_gap.push(["_trackPageview"]);
-_gap.push(["_gapTrackBounceViaTime", 10]);
-_gap.push(["_gapTrackBounceViaScroll", 50]);
-_gap.push(["_gapTrackReads", 20, 30]);
-_gap.push(["_gapTrackLinkClicks"]);
-_gap.push(["_gapTrackMaxScroll", 25]);
-_gapDebug = true;
- 
-(function() {
-    var gap = document.createElement("script");
-    gap.async = true;
-    gap.type = "text/javascript";
-    gap.src = "http://rockymadden.com/js/gap.min.js";
- 
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gap, s);
-})();
-</script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20432336-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
 
   </body>
 </html>
