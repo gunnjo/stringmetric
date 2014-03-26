@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>StringTokenizer - com.rockymadden.stringmetric.Tokenize.StringTokenizer</title>
-          <meta name="description" content="StringTokenizer - com.rockymadden.stringmetric.Tokenize.StringTokenizer" />
-          <meta name="keywords" content="StringTokenizer com.rockymadden.stringmetric.Tokenize.StringTokenizer" />
+          <title>AlgorithmDecorator - com.rockymadden.stringmetric.AlgorithmDecorator</title>
+          <meta name="description" content="AlgorithmDecorator - com.rockymadden.stringmetric.AlgorithmDecorator" />
+          <meta name="keywords" content="AlgorithmDecorator com.rockymadden.stringmetric.AlgorithmDecorator" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'com.rockymadden.stringmetric.Tokenize$$StringTokenizer';
+            var hash = 'com.rockymadden.stringmetric.AlgorithmDecorator';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="Tokenize$$StringTokenizer$.html" title="Go to companion"><img src="../../../lib/trait_to_object_big.png" /></a>
-        <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.rockymadden">rockymadden</a>.<a href="package.html" class="extype" name="com.rockymadden.stringmetric">stringmetric</a>.<a href="Tokenize$.html" class="extype" name="com.rockymadden.stringmetric.Tokenize">Tokenize</a></p>
-        <h1><a href="Tokenize$$StringTokenizer$.html" title="Go to companion">StringTokenizer</a></h1>
+        <img src="../../../lib/trait_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.rockymadden">rockymadden</a>.<a href="package.html" class="extype" name="com.rockymadden.stringmetric">stringmetric</a></p>
+        <h1>AlgorithmDecorator</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,16 +35,16 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">StringTokenizer</span><span class="result"> extends <a href="Tokenize$$Tokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenize.Tokenizer">Tokenizer</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]]</span>
+        <span class="name">AlgorithmDecorator</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="Tokenize$$Tokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenize.Tokenizer">Tokenizer</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="Tokenize$$NGramTokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenize.NGramTokenizer">NGramTokenizer</a></div>
+          <div class="subClasses hiddenContent"><a href="StringAlgorithmDecorator.html" class="extype" name="com.rockymadden.stringmetric.StringAlgorithmDecorator">StringAlgorithmDecorator</a></div>
         </div></div>
         
 
@@ -62,7 +62,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.rockymadden.stringmetric.Tokenize.StringTokenizer"><span>StringTokenizer</span></li><li class="in" name="com.rockymadden.stringmetric.Tokenize.Tokenizer"><span>Tokenizer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.rockymadden.stringmetric.AlgorithmDecorator"><span>AlgorithmDecorator</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -86,32 +86,32 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="com.rockymadden.stringmetric.Tokenize.StringTokenizer#tokenize" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="tokenize(a:String):Option[Array[String]]"></a>
-      <a id="tokenize(String):Option[Array[String]]"></a>
+              <ol><li name="com.rockymadden.stringmetric.AlgorithmDecorator#withMemoization" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="withMemoization:com.rockymadden.stringmetric.Algorithm[A]"></a>
+      <a id="withMemoization:Algorithm[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tokenize</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">withMemoization</span><span class="result">: <a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="com.rockymadden.stringmetric.AlgorithmDecorator.A">A</span>]</span>
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.Tokenize.Tokenizer#tokenize" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="tokenize(a:A):Option[Array[A]]"></a>
-      <a id="tokenize(Array[Char]):Option[Array[Array[Char]]]"></a>
+    </li><li name="com.rockymadden.stringmetric.AlgorithmDecorator#withTransform" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="withTransform:(A=&gt;A)=&gt;com.rockymadden.stringmetric.Algorithm[A]"></a>
+      <a id="withTransform:((A)⇒A)⇒Algorithm[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tokenize</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]]]</span>
+        <span class="name">withTransform</span><span class="result">: ((<span class="extype" name="com.rockymadden.stringmetric.AlgorithmDecorator.A">A</span>) ⇒ <span class="extype" name="com.rockymadden.stringmetric.AlgorithmDecorator.A">A</span>) ⇒ <a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="com.rockymadden.stringmetric.AlgorithmDecorator.A">A</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tokenize$$Tokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenize.Tokenizer">Tokenizer</a></dd></dl></div>
+      
     </li></ol>
             </div>
 
@@ -429,9 +429,7 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="com.rockymadden.stringmetric.Tokenize.Tokenizer">
-              <h3>Inherited from <a href="Tokenize$$Tokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenize.Tokenizer">Tokenizer</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]]</h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

@@ -81,7 +81,46 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.rockymadden.stringmetric.CompareTuple" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.rockymadden.stringmetric.Algorithm" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Algorithm[A]extendsAnyRef"></a>
+      <a id="Algorithm[A]:Algorithm[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Algorithm.html"><span class="name">Algorithm</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.AlgorithmDecorator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AlgorithmDecorator[A]extendsAnyRef"></a>
+      <a id="AlgorithmDecorator[A]:AlgorithmDecorator[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AlgorithmDecorator.html"><span class="name">AlgorithmDecorator</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.Alphabet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AlphabetextendsAnyRef"></a>
+      <a id="Alphabet:Alphabet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Alphabet.html"><span class="name">Alphabet</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.CompareTuple" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CompareTuple[T]=(Array[T],Array[T])"></a>
       <a id="CompareTuple[T]:(Array[T],Array[T])"></a>
       <h4 class="signature">
@@ -107,6 +146,162 @@
       </span>
       </h4>
       
+    </li><li name="com.rockymadden.stringmetric.Metric" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Metric[A,B]extendsAnyRef"></a>
+      <a id="Metric[A,B]:Metric[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Metric.html"><span class="name">Metric</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.MetricDecorator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MetricDecorator[A,B]extendsAnyRef"></a>
+      <a id="MetricDecorator[A,B]:MetricDecorator[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MetricDecorator.html"><span class="name">MetricDecorator</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.NGramTokenizer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NGramTokenizerextendsStringTokenizerwithProductwithSerializable"></a>
+      <a id="NGramTokenizer:NGramTokenizer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="NGramTokenizer.html"><span class="name">NGramTokenizer</span></a><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="StringTokenizer.html" class="extype" name="com.rockymadden.stringmetric.StringTokenizer">StringTokenizer</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.StringAlgorithm" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StringAlgorithmextendsAlgorithm[Array[Char]]"></a>
+      <a id="StringAlgorithm:StringAlgorithm"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StringAlgorithm.html"><span class="name">StringAlgorithm</span></a><span class="result"> extends <a href="Algorithm.html" class="extype" name="com.rockymadden.stringmetric.Algorithm">Algorithm</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.StringAlgorithmDecorator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringAlgorithmDecoratorextendsAlgorithmDecorator[Array[Char]]withProductwithSerializable"></a>
+      <a id="StringAlgorithmDecorator:StringAlgorithmDecorator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StringAlgorithmDecorator.html"><span class="name">StringAlgorithmDecorator</span></a><span class="params">(<span name="sa">sa: <a href="StringAlgorithm.html" class="extype" name="com.rockymadden.stringmetric.StringAlgorithm">StringAlgorithm</a></span>)</span><span class="result"> extends <a href="AlgorithmDecorator.html" class="extype" name="com.rockymadden.stringmetric.AlgorithmDecorator">AlgorithmDecorator</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.StringMetric" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StringMetric[A]extendsMetric[Array[Char],A]"></a>
+      <a id="StringMetric[A]:StringMetric[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StringMetric.html"><span class="name">StringMetric</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="Metric.html" class="extype" name="com.rockymadden.stringmetric.Metric">Metric</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="com.rockymadden.stringmetric.StringMetric.A">A</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.StringMetricDecorator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringMetricDecorator[A]extendsMetricDecorator[Array[Char],A]withProductwithSerializable"></a>
+      <a id="StringMetricDecorator[A]:StringMetricDecorator[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StringMetricDecorator.html"><span class="name">StringMetricDecorator</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="sm">sm: <a href="StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>[<span class="extype" name="com.rockymadden.stringmetric.StringMetricDecorator.A">A</span>]</span>)</span><span class="result"> extends <a href="MetricDecorator.html" class="extype" name="com.rockymadden.stringmetric.MetricDecorator">MetricDecorator</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="com.rockymadden.stringmetric.StringMetricDecorator.A">A</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.StringTokenizer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StringTokenizerextendsTokenizer[Array[Char]]"></a>
+      <a id="StringTokenizer:StringTokenizer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StringTokenizer.html"><span class="name">StringTokenizer</span></a><span class="result"> extends <a href="Tokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenizer">Tokenizer</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.StringTransform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringTransform=Array[Char]=&gt;Array[Char]"></a>
+      <a id="StringTransform:(Array[Char])⇒Array[Char]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">StringTransform</span><span class="result"> = (<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]) ⇒ <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.Tokenizer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Tokenizer[A]extendsAnyRef"></a>
+      <a id="Tokenizer[A]:Tokenizer[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Tokenizer.html"><span class="name">Tokenizer</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.Transform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Transform[A]=A=&gt;A"></a>
+      <a id="Transform[A]:(A)⇒A"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Transform</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> = (<span class="extype" name="com.rockymadden.stringmetric.Transform.A">A</span>) ⇒ <span class="extype" name="com.rockymadden.stringmetric.Transform.A">A</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.transform" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="transformextendsAnyRef"></a>
+      <a id="transform:transform"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="transform.html"><span class="name">transform</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
     </li></ol>
             </div>
 
@@ -114,20 +309,7 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="com.rockymadden.stringmetric.Algorithm" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Algorithm"></a>
-      <a id="Algorithm:Algorithm"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Algorithm$.html"><span class="name">Algorithm</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.Alphabet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.rockymadden.stringmetric.Alphabet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Alphabet"></a>
       <a id="Alphabet:Alphabet"></a>
       <h4 class="signature">
@@ -140,42 +322,29 @@
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.Metric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Metric"></a>
-      <a id="Metric:Metric"></a>
+    </li><li name="com.rockymadden.stringmetric.StringAlgorithm" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringAlgorithm"></a>
+      <a id="StringAlgorithm:StringAlgorithm"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Metric$.html"><span class="name">Metric</span></a>
+        <a href="StringAlgorithm$.html"><span class="name">StringAlgorithm</span></a>
       </span>
       </h4>
       
-    </li><li name="com.rockymadden.stringmetric.Tokenize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Tokenize"></a>
-      <a id="Tokenize:Tokenize"></a>
+    </li><li name="com.rockymadden.stringmetric.StringMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringMetric"></a>
+      <a id="StringMetric:StringMetric"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Tokenize$.html"><span class="name">Tokenize</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="com.rockymadden.stringmetric.Transform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Transform"></a>
-      <a id="Transform:Transform"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Transform$.html"><span class="name">Transform</span></a>
+        <a href="StringMetric$.html"><span class="name">StringMetric</span></a>
       </span>
       </h4>
       
@@ -215,6 +384,19 @@
       </span>
       <span class="symbol">
         <span class="name">stringToCharArray</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.rockymadden.stringmetric.transform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="transform"></a>
+      <a id="transform:transform"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="transform$.html"><span class="name">transform</span></a><span class="result"> extends <a href="transform.html" class="extype" name="com.rockymadden.stringmetric.transform">transform</a></span>
       </span>
       </h4>
       

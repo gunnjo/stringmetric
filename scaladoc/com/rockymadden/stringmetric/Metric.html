@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Tokenizer - com.rockymadden.stringmetric.Tokenize.Tokenizer</title>
-          <meta name="description" content="Tokenizer - com.rockymadden.stringmetric.Tokenize.Tokenizer" />
-          <meta name="keywords" content="Tokenizer com.rockymadden.stringmetric.Tokenize.Tokenizer" />
+          <title>Metric - com.rockymadden.stringmetric.Metric</title>
+          <meta name="description" content="Metric - com.rockymadden.stringmetric.Metric" />
+          <meta name="keywords" content="Metric com.rockymadden.stringmetric.Metric" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'com.rockymadden.stringmetric.Tokenize$$Tokenizer';
+            var hash = 'com.rockymadden.stringmetric.Metric';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -25,17 +25,17 @@
         <body class="type">
       <div id="definition">
         <img src="../../../lib/trait_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.rockymadden">rockymadden</a>.<a href="package.html" class="extype" name="com.rockymadden.stringmetric">stringmetric</a>.<a href="Tokenize$.html" class="extype" name="com.rockymadden.stringmetric.Tokenize">Tokenize</a></p>
-        <h1>Tokenizer</h1>
+        <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.rockymadden">rockymadden</a>.<a href="package.html" class="extype" name="com.rockymadden.stringmetric">stringmetric</a></p>
+        <h1>Metric</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">sealed </span>
+        <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Tokenizer</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Metric</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -44,7 +44,7 @@
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="Tokenize$$NGramTokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenize.NGramTokenizer">NGramTokenizer</a>, <a href="Tokenize$$StringTokenizer.html" class="extype" name="com.rockymadden.stringmetric.Tokenize.StringTokenizer">StringTokenizer</a></div>
+          <div class="subClasses hiddenContent"><a href="similarity/DiceSorensenMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.DiceSorensenMetric">DiceSorensenMetric</a>, <a href="similarity/HammingMetric$.html" class="extype" name="com.rockymadden.stringmetric.similarity.HammingMetric">HammingMetric</a>, <a href="similarity/JaccardMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.JaccardMetric">JaccardMetric</a>, <a href="similarity/JaroMetric$.html" class="extype" name="com.rockymadden.stringmetric.similarity.JaroMetric">JaroMetric</a>, <a href="similarity/JaroWinklerMetric$.html" class="extype" name="com.rockymadden.stringmetric.similarity.JaroWinklerMetric">JaroWinklerMetric</a>, <a href="similarity/LevenshteinMetric$.html" class="extype" name="com.rockymadden.stringmetric.similarity.LevenshteinMetric">LevenshteinMetric</a>, <a href="phonetic/MetaphoneMetric$.html" class="extype" name="com.rockymadden.stringmetric.phonetic.MetaphoneMetric">MetaphoneMetric</a>, <a href="similarity/NGramMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.NGramMetric">NGramMetric</a>, <a href="phonetic/NysiisMetric$.html" class="extype" name="com.rockymadden.stringmetric.phonetic.NysiisMetric">NysiisMetric</a>, <a href="similarity/OverlapMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.OverlapMetric">OverlapMetric</a>, <a href="similarity/RatcliffObershelpMetric$.html" class="extype" name="com.rockymadden.stringmetric.similarity.RatcliffObershelpMetric">RatcliffObershelpMetric</a>, <a href="phonetic/RefinedNysiisMetric$.html" class="extype" name="com.rockymadden.stringmetric.phonetic.RefinedNysiisMetric">RefinedNysiisMetric</a>, <a href="phonetic/RefinedSoundexMetric$.html" class="extype" name="com.rockymadden.stringmetric.phonetic.RefinedSoundexMetric">RefinedSoundexMetric</a>, <a href="phonetic/SoundexMetric$.html" class="extype" name="com.rockymadden.stringmetric.phonetic.SoundexMetric">SoundexMetric</a>, <a href="StringMetric.html" class="extype" name="com.rockymadden.stringmetric.StringMetric">StringMetric</a>, <a href="similarity/WeightedLevenshteinMetric.html" class="extype" name="com.rockymadden.stringmetric.similarity.WeightedLevenshteinMetric">WeightedLevenshteinMetric</a></div>
         </div></div>
         
 
@@ -62,7 +62,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.rockymadden.stringmetric.Tokenize.Tokenizer"><span>Tokenizer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.rockymadden.stringmetric.Metric"><span>Metric</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -86,16 +86,16 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="com.rockymadden.stringmetric.Tokenize.Tokenizer#tokenize" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="tokenize(a:A):Option[Array[A]]"></a>
-      <a id="tokenize(A):Option[Array[A]]"></a>
+              <ol><li name="com.rockymadden.stringmetric.Metric#compare" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="compare(a:A,b:A):Option[B]"></a>
+      <a id="compare(A,A):Option[B]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">tokenize</span><span class="params">(<span name="a">a: <span class="extype" name="com.rockymadden.stringmetric.Tokenize.Tokenizer.A">A</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="com.rockymadden.stringmetric.Tokenize.Tokenizer.A">A</span>]]</span>
+        <span class="name">compare</span><span class="params">(<span name="a">a: <span class="extype" name="com.rockymadden.stringmetric.Metric.A">A</span></span>, <span name="b">b: <span class="extype" name="com.rockymadden.stringmetric.Metric.A">A</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.rockymadden.stringmetric.Metric.B">B</span>]</span>
       </span>
       </h4>
       
